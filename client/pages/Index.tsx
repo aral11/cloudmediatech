@@ -488,7 +488,7 @@ export default function Index() {
                 <p className="text-slate-300">Web Development</p>
                 <p className="text-slate-300">Mobile Apps</p>
                 <p className="text-slate-300">UI/UX Design</p>
-                <p className="text-slate-300">Cloud Integration</p>
+                <p className="text-slate-300">E-commerce & Deployment</p>
               </div>
             </div>
 
