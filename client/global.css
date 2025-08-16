@@ -42,20 +42,37 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Tech-inspired colors */
+    --tech-50: 220 60% 97%;
+    --tech-100: 220 50% 90%;
+    --tech-200: 220 45% 80%;
+    --tech-300: 220 40% 70%;
+    --tech-400: 220 35% 55%;
+    --tech-500: 220 30% 40%;
+    --tech-600: 220 35% 30%;
+    --tech-700: 220 40% 20%;
+    --tech-800: 220 45% 15%;
+    --tech-900: 220 50% 10%;
+
+    /* Cloud colors (cyan/teal for cloud theme) */
+    --cloud-50: 180 65% 95%;
+    --cloud-100: 180 60% 85%;
+    --cloud-200: 180 55% 75%;
+    --cloud-300: 180 50% 65%;
+    --cloud-400: 180 45% 55%;
+    --cloud-500: 180 50% 45%;
+    --cloud-600: 180 55% 35%;
+    --cloud-700: 180 60% 25%;
+    --cloud-800: 180 65% 15%;
+    --cloud-900: 180 70% 10%;
   }
 
   .dark {
