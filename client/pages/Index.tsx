@@ -406,48 +406,45 @@ export default function Index() {
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
-                    <div className="relative">
+                    <div className="space-y-1">
+                      <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
                       <Input
+                        id="name"
                         name="name"
-                        placeholder="Your Name"
+                        placeholder="Enter your name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="peer pt-6 pb-2 px-3 border-border focus:border-tech-500 transition-colors"
+                        className="border-border focus:border-tech-500 transition-colors"
                       />
-                      <label className="absolute left-3 top-2 text-sm text-muted-foreground transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-tech-500">
-                        Name
-                      </label>
                     </div>
 
-                    <div className="relative">
+                    <div className="space-y-1">
+                      <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
                       <Input
+                        id="email"
                         name="email"
                         type="email"
-                        placeholder="Your Email"
+                        placeholder="Enter your email"
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="peer pt-6 pb-2 px-3 border-border focus:border-tech-500 transition-colors"
+                        className="border-border focus:border-tech-500 transition-colors"
                       />
-                      <label className="absolute left-3 top-2 text-sm text-muted-foreground transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-tech-500">
-                        Email
-                      </label>
                     </div>
 
-                    <div className="relative flex-1">
+                    <div className="space-y-1 flex-1 flex flex-col">
+                      <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
                       <Textarea
+                        id="message"
                         name="message"
-                        placeholder="Your Message"
+                        placeholder="Enter your message"
                         value={formData.message}
                         onChange={handleInputChange}
                         required
                         rows={6}
-                        className="peer pt-6 pb-2 px-3 border-border focus:border-tech-500 transition-colors resize-none h-full min-h-[120px]"
+                        className="border-border focus:border-tech-500 transition-colors resize-none flex-1 min-h-[120px]"
                       />
-                      <label className="absolute left-3 top-2 text-sm text-muted-foreground transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-sm peer-focus:text-tech-500">
-                        Message
-                      </label>
                     </div>
 
                     <Button
