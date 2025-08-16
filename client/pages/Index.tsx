@@ -77,21 +77,6 @@ export default function Index() {
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
   useEffect(() => {
     const timer = setInterval(nextProject, 5000);
     return () => clearInterval(timer);
