@@ -21,11 +21,6 @@ import { Link } from 'react-router-dom';
 export default function Index() {
   const [currentProject, setCurrentProject] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
 
   const projects = [
     {
