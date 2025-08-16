@@ -323,133 +323,73 @@ export default function Index() {
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">Get In Touch</h2>
             <p className="text-lg text-muted-foreground">Ready to start your next project? Let's talk!</p>
           </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
-            <div className="animate-slide-in-left h-full">
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Contact Information</CardTitle>
-                  <CardDescription>Reach out to us through any of these channels</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between space-y-6">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3">
-                        <Mail className="h-6 w-6 text-tech-500" />
-                      </div>
-                      <div>
-                        <p className="font-semibold">Email</p>
-                        <a href="mailto:cloudmediatech@gmail.com" className="text-tech-500 hover:underline">
-                          cloudmediatech@gmail.com
-                        </a>
-                      </div>
-                    </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3">
-                        <MessageSquare className="h-6 w-6 text-tech-500" />
-                      </div>
-                      <div>
-                        <p className="font-semibold">WhatsApp</p>
-                        <a href="https://wa.me/918105003858" className="text-tech-500 hover:underline">
-                          +91 8105003858
-                        </a>
-                      </div>
+          <div className="max-w-2xl mx-auto">
+            <Card className="animate-fade-in">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Contact Information</CardTitle>
+                <CardDescription>Reach out to us through any of these channels</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-8">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center group">
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
+                      <Mail className="h-8 w-8" />
                     </div>
-
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3">
-                        <Instagram className="h-6 w-6 text-tech-500" />
-                      </div>
-                      <div>
-                        <p className="font-semibold">Instagram</p>
-                        <a href="https://instagram.com/cloudmediatech" className="text-tech-500 hover:underline">
-                          @cloudmediatech
-                        </a>
-                      </div>
-                    </div>
+                    <p className="font-semibold mb-2">Email</p>
+                    <a href="mailto:cloudmediatech@gmail.com" className="text-tech-500 hover:underline text-sm">
+                      cloudmediatech@gmail.com
+                    </a>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border">
-                    <Button
-                      className="bg-green-500 hover:bg-green-600 text-white flex-1"
-                      onClick={() => window.open('https://wa.me/918105003858', '_blank')}
-                    >
-                      <MessageSquare className="h-4 w-4 mr-2" />
-                      WhatsApp
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => window.open('https://instagram.com/cloudmediatech', '_blank')}
-                    >
-                      <Instagram className="h-4 w-4 mr-2" />
-                      Instagram
-                    </Button>
+                  <div className="text-center group">
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                      <MessageSquare className="h-8 w-8" />
+                    </div>
+                    <p className="font-semibold mb-2">WhatsApp</p>
+                    <a href="https://wa.me/918105003858" className="text-tech-500 hover:underline text-sm">
+                      +91 8105003858
+                    </a>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
 
-            <div className="animate-slide-in-right h-full">
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                  <CardDescription>We'll get back to you as soon as possible</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
-                    <div className="space-y-1">
-                      <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
-                      <Input
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="border-border focus:border-tech-500 transition-colors"
-                      />
+                  <div className="text-center group">
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                      <Instagram className="h-8 w-8" />
                     </div>
+                    <p className="font-semibold mb-2">Instagram</p>
+                    <a href="https://instagram.com/cloudmediatech" className="text-tech-500 hover:underline text-sm">
+                      @cloudmediatech
+                    </a>
+                  </div>
+                </div>
 
-                    <div className="space-y-1">
-                      <label htmlFor="email" className="text-sm font-medium text-foreground">Email</label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="border-border focus:border-tech-500 transition-colors"
-                      />
-                    </div>
-
-                    <div className="space-y-1 flex-1 flex flex-col">
-                      <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Enter your message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                        rows={6}
-                        className="border-border focus:border-tech-500 transition-colors resize-none flex-1 min-h-[120px]"
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-tech-500 hover:bg-tech-600 text-white py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 mt-auto"
-                    >
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </div>
+                <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border">
+                  <Button
+                    className="bg-green-500 hover:bg-green-600 text-white flex-1"
+                    onClick={() => window.open('https://wa.me/918105003858', '_blank')}
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    WhatsApp
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => window.open('https://instagram.com/cloudmediatech', '_blank')}
+                  >
+                    <Instagram className="h-4 w-4 mr-2" />
+                    Instagram
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => window.open('mailto:cloudmediatech@gmail.com', '_blank')}
+                  >
+                    <Mail className="h-4 w-4 mr-2" />
+                    Email
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
