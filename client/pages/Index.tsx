@@ -41,7 +41,7 @@ export default function Index() {
       title: "CoastalConnect",
       description: "Netlify hosted web application with responsive design",
       image: "/placeholder.svg",
-      status: "Live",
+      status: "Under Development",
       url: "https://coastalconnect.netlify.app"
     },
     {
