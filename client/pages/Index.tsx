@@ -1,22 +1,28 @@
-import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { 
-  Code, 
-  Smartphone, 
-  Palette, 
-  Cloud, 
-  Mail, 
-  MessageSquare, 
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
+import {
+  Code,
+  Smartphone,
+  Palette,
+  Cloud,
+  Mail,
+  MessageSquare,
   Instagram,
   ExternalLink,
   ChevronLeft,
   ChevronRight,
   Menu,
-  X
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+  X,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const [currentProject, setCurrentProject] = useState(0);
@@ -25,48 +31,51 @@ export default function Index() {
   const projects = [
     {
       title: "Decoremporiums",
-      description: "Interior design website with elegant layouts and modern aesthetics",
+      description:
+        "Interior design website with elegant layouts and modern aesthetics",
       image: "/placeholder.svg",
       status: "Live",
-      url: "https://www.decoremporiums.com"
+      url: "https://www.decoremporiums.com",
     },
     {
       title: "CoastalConnect",
       description: "Netlify hosted web application with responsive design",
       image: "/placeholder.svg",
       status: "Under Development",
-      url: "https://coastalconnect.netlify.app"
+      url: "https://coastalconnect.netlify.app",
     },
     {
       title: "Aral Portfolio",
       description: "Personal portfolio website showcasing creative work",
       image: "/placeholder.svg",
       status: "Live",
-      url: "https://aral-portfolio.netlify.app"
-    }
+      url: "https://aral-portfolio.netlify.app",
+    },
   ];
 
   const services = [
     {
       icon: Code,
       title: "Web Applications",
-      description: "Modern, responsive websites and simple web applications"
+      description: "Modern, responsive websites and simple web applications",
     },
     {
       icon: Smartphone,
       title: "Mobile Apps (iOS & Android)",
-      description: "Native and cross-platform mobile applications for all devices"
+      description:
+        "Native and cross-platform mobile applications for all devices",
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "Beautiful, user-centered designs that convert and engage"
+      description: "Beautiful, user-centered designs that convert and engage",
     },
     {
       icon: Cloud,
       title: "Website Deployment & E-commerce",
-      description: "Simple websites, small e-commerce solutions, and Netlify deployments"
-    }
+      description:
+        "Simple websites, small e-commerce solutions, and Netlify deployments",
+    },
   ];
 
   const nextProject = () => {
@@ -89,21 +98,45 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800" 
-                alt="Cloud Media Tech" 
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                alt="Cloud Media Tech"
                 className="h-8 w-auto animate-floating"
               />
-              <span className="font-poppins font-bold text-xl text-foreground">Cloud Media Tech</span>
+              <span className="font-poppins font-bold text-xl text-foreground">
+                Cloud Media Tech
+              </span>
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="hover:text-tech-500 transition-colors">Home</a>
-              <a href="#about" className="hover:text-tech-500 transition-colors">About</a>
-              <a href="#projects" className="hover:text-tech-500 transition-colors">Projects</a>
-              <a href="#services" className="hover:text-tech-500 transition-colors">Services</a>
-              <a href="#contact" className="hover:text-tech-500 transition-colors">Contact</a>
+              <a href="#home" className="hover:text-tech-500 transition-colors">
+                Home
+              </a>
+              <a
+                href="#about"
+                className="hover:text-tech-500 transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="hover:text-tech-500 transition-colors"
+              >
+                Projects
+              </a>
+              <a
+                href="#services"
+                className="hover:text-tech-500 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                className="hover:text-tech-500 transition-colors"
+              >
+                Contact
+              </a>
               <ThemeToggle />
             </div>
 
@@ -115,7 +148,11 @@ export default function Index() {
                 size="icon"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {isMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
               </Button>
             </div>
           </div>
@@ -124,11 +161,41 @@ export default function Index() {
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 border-t border-border">
               <div className="flex flex-col space-y-4 pt-4">
-                <a href="#home" className="hover:text-tech-500 transition-colors" onClick={() => setIsMenuOpen(false)}>Home</a>
-                <a href="#about" className="hover:text-tech-500 transition-colors" onClick={() => setIsMenuOpen(false)}>About</a>
-                <a href="#projects" className="hover:text-tech-500 transition-colors" onClick={() => setIsMenuOpen(false)}>Projects</a>
-                <a href="#services" className="hover:text-tech-500 transition-colors" onClick={() => setIsMenuOpen(false)}>Services</a>
-                <a href="#contact" className="hover:text-tech-500 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
+                <a
+                  href="#home"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                  href="#about"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="#projects"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Projects
+                </a>
+                <a
+                  href="#services"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
+                </a>
+                <a
+                  href="#contact"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </a>
               </div>
             </div>
           )}
@@ -136,7 +203,10 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 min-h-screen flex items-center relative overflow-hidden">
+      <section
+        id="home"
+        className="pt-20 min-h-screen flex items-center relative overflow-hidden"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-tech-50 via-cloud-50 to-background animate-gradient-x bg-[length:400%_400%]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -149,10 +219,11 @@ export default function Index() {
                 <span className="text-foreground">for Every Business</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-lg">
-                Transform your digital presence with cutting-edge technology and creative design solutions.
+                Transform your digital presence with cutting-edge technology and
+                creative design solutions.
               </p>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-tech-500 hover:bg-tech-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Get Started
@@ -160,9 +231,9 @@ export default function Index() {
             </div>
             <div className="flex justify-center animate-slide-in-right">
               <div className="relative">
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800" 
-                  alt="Cloud Media Tech Logo" 
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                  alt="Cloud Media Tech Logo"
                   className="h-64 w-auto animate-floating drop-shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-tech-500/20 rounded-full blur-3xl animate-glow"></div>
@@ -176,21 +247,40 @@ export default function Index() {
       <section id="about" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">About Us</h2>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              About Us
+            </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We specialize in creating smart, scalable, and user-friendly applications — from modern websites 
-              to powerful mobile apps on iOS and Android. Our team combines creativity with technology to deliver 
-              results that impress.
+              We specialize in creating smart, scalable, and user-friendly
+              applications — from modern websites to powerful mobile apps on iOS
+              and Android. Our team combines creativity with technology to
+              deliver results that impress.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Code, title: "Web Development", description: "Modern frameworks and technologies" },
-              { icon: Smartphone, title: "Mobile Apps", description: "iOS and Android applications" },
-              { icon: Cloud, title: "Custom Solutions", description: "Tailored to your business needs" }
+              {
+                icon: Code,
+                title: "Web Development",
+                description: "Modern frameworks and technologies",
+              },
+              {
+                icon: Smartphone,
+                title: "Mobile Apps",
+                description: "iOS and Android applications",
+              },
+              {
+                icon: Cloud,
+                title: "Custom Solutions",
+                description: "Tailored to your business needs",
+              },
             ].map((item, index) => (
-              <div key={index} className="text-center group animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div
+                key={index}
+                className="text-center group animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <div className="bg-tech-100 dark:bg-tech-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="h-10 w-10 text-tech-500" />
                 </div>
@@ -206,13 +296,21 @@ export default function Index() {
       <section id="projects" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">Our Projects</h2>
-            <p className="text-lg text-muted-foreground">Showcasing our latest work and achievements</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              Our Projects
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Showcasing our latest work and achievements
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {projects.map((project, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <div className="relative">
                   <img
                     src={project.image}
@@ -220,11 +318,13 @@ export default function Index() {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute top-3 right-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Live'
-                        ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
-                        : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100'
-                    }`}>
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        project.status === "Live"
+                          ? "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100"
+                          : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100"
+                      }`}
+                    >
                       {project.status}
                     </span>
                   </div>
@@ -232,7 +332,7 @@ export default function Index() {
                     {project.url !== "#" && (
                       <Button
                         variant="secondary"
-                        onClick={() => window.open(project.url, '_blank')}
+                        onClick={() => window.open(project.url, "_blank")}
                         className="bg-white/90 text-black hover:bg-white"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
@@ -243,7 +343,9 @@ export default function Index() {
                 </div>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription className="text-sm">{project.description}</CardDescription>
+                  <CardDescription className="text-sm">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   {project.url !== "#" ? (
@@ -251,13 +353,18 @@ export default function Index() {
                       variant="outline"
                       size="sm"
                       className="w-full"
-                      onClick={() => window.open(project.url, '_blank')}
+                      onClick={() => window.open(project.url, "_blank")}
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       View Project
                     </Button>
                   ) : (
-                    <Button variant="outline" size="sm" className="w-full" disabled>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      disabled
+                    >
                       Portfolio Website
                     </Button>
                   )}
@@ -272,13 +379,21 @@ export default function Index() {
       <section id="services" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">Our Services</h2>
-            <p className="text-lg text-muted-foreground">Comprehensive solutions for your digital needs</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              Our Services
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Comprehensive solutions for your digital needs
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in border-border" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in border-border"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardHeader className="text-center">
                   <div className="bg-tech-100 dark:bg-tech-800 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
                     <service.icon className="h-8 w-8" />
@@ -286,7 +401,9 @@ export default function Index() {
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-center">{service.description}</p>
+                  <p className="text-muted-foreground text-center">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -298,15 +415,21 @@ export default function Index() {
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">Get In Touch</h2>
-            <p className="text-lg text-muted-foreground">Ready to start your next project? Let's talk!</p>
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              Get In Touch
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Ready to start your next project? Let's talk!
+            </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             <Card className="animate-fade-in">
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
-                <CardDescription>Reach out to us through any of these channels</CardDescription>
+                <CardDescription>
+                  Reach out to us through any of these channels
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-8">
                 <div className="grid md:grid-cols-3 gap-6">
@@ -315,7 +438,10 @@ export default function Index() {
                       <Mail className="h-8 w-8" />
                     </div>
                     <p className="font-semibold mb-2">Email</p>
-                    <a href="mailto:cloudmediatech@gmail.com" className="text-tech-500 hover:underline text-sm">
+                    <a
+                      href="mailto:cloudmediatech@gmail.com"
+                      className="text-tech-500 hover:underline text-sm"
+                    >
                       cloudmediatech@gmail.com
                     </a>
                   </div>
@@ -325,7 +451,10 @@ export default function Index() {
                       <MessageSquare className="h-8 w-8" />
                     </div>
                     <p className="font-semibold mb-2">WhatsApp</p>
-                    <a href="https://wa.me/918105003858" className="text-tech-500 hover:underline text-sm">
+                    <a
+                      href="https://wa.me/918105003858"
+                      className="text-tech-500 hover:underline text-sm"
+                    >
                       +91 8105003858
                     </a>
                   </div>
@@ -335,7 +464,10 @@ export default function Index() {
                       <Instagram className="h-8 w-8" />
                     </div>
                     <p className="font-semibold mb-2">Instagram</p>
-                    <a href="https://instagram.com/cloudmediatech" className="text-tech-500 hover:underline text-sm">
+                    <a
+                      href="https://instagram.com/cloudmediatech"
+                      className="text-tech-500 hover:underline text-sm"
+                    >
                       @cloudmediatech
                     </a>
                   </div>
@@ -344,7 +476,9 @@ export default function Index() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border">
                   <Button
                     className="bg-green-500 hover:bg-green-600 text-white flex-1"
-                    onClick={() => window.open('https://wa.me/918105003858', '_blank')}
+                    onClick={() =>
+                      window.open("https://wa.me/918105003858", "_blank")
+                    }
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
                     WhatsApp
@@ -352,7 +486,12 @@ export default function Index() {
                   <Button
                     variant="outline"
                     className="flex-1"
-                    onClick={() => window.open('https://instagram.com/cloudmediatech', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://instagram.com/cloudmediatech",
+                        "_blank",
+                      )
+                    }
                   >
                     <Instagram className="h-4 w-4 mr-2" />
                     Instagram
@@ -360,7 +499,9 @@ export default function Index() {
                   <Button
                     variant="outline"
                     className="flex-1"
-                    onClick={() => window.open('mailto:cloudmediatech@gmail.com', '_blank')}
+                    onClick={() =>
+                      window.open("mailto:cloudmediatech@gmail.com", "_blank")
+                    }
                   >
                     <Mail className="h-4 w-4 mr-2" />
                     Email
@@ -383,7 +524,9 @@ export default function Index() {
                   alt="Cloud Media Tech"
                   className="h-8 w-auto"
                 />
-                <span className="font-poppins font-bold text-xl text-white">Cloud Media Tech</span>
+                <span className="font-poppins font-bold text-xl text-white">
+                  Cloud Media Tech
+                </span>
               </div>
               <p className="text-slate-300">
                 Innovative Web & Mobile Solutions for Every Business
@@ -391,17 +534,41 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-white">Quick Links</h4>
+              <h4 className="font-semibold text-lg mb-4 text-white">
+                Quick Links
+              </h4>
               <div className="space-y-2">
-                <a href="#about" className="block text-slate-300 hover:text-white transition-colors">About</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
-                <a href="#projects" className="block text-slate-300 hover:text-white transition-colors">Projects</a>
-                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
+                <a
+                  href="#about"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
+                  About
+                </a>
+                <a
+                  href="#services"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
+                  Services
+                </a>
+                <a
+                  href="#projects"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#contact"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
+                  Contact
+                </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
+              <h4 className="font-semibold text-lg mb-4 text-white">
+                Services
+              </h4>
               <div className="space-y-2">
                 <p className="text-slate-300">Web Development</p>
                 <p className="text-slate-300">Mobile Apps</p>
@@ -413,13 +580,22 @@ export default function Index() {
             <div>
               <h4 className="font-semibold text-lg mb-4 text-white">Connect</h4>
               <div className="space-y-2">
-                <a href="mailto:cloudmediatech@gmail.com" className="block text-slate-300 hover:text-white transition-colors">
+                <a
+                  href="mailto:cloudmediatech@gmail.com"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
                   cloudmediatech@gmail.com
                 </a>
-                <a href="https://wa.me/918105003858" className="block text-slate-300 hover:text-white transition-colors">
+                <a
+                  href="https://wa.me/918105003858"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
                   WhatsApp: +91 8105003858
                 </a>
-                <a href="https://instagram.com/cloudmediatech" className="block text-slate-300 hover:text-white transition-colors">
+                <a
+                  href="https://instagram.com/cloudmediatech"
+                  className="block text-slate-300 hover:text-white transition-colors"
+                >
                   @cloudmediatech
                 </a>
               </div>

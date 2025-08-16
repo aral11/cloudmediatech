@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -138,7 +138,7 @@ export default {
             transform: "translateX(0)",
           },
         },
-        "floating": {
+        floating: {
           "0%, 100%": {
             transform: "translateY(0px)",
           },
@@ -146,7 +146,7 @@ export default {
             transform: "translateY(-10px)",
           },
         },
-        "glow": {
+        glow: {
           "0%, 100%": {
             boxShadow: "0 0 20px hsl(var(--tech-500))",
           },
@@ -169,8 +169,8 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in-left": "slide-in-left 0.6s ease-out",
         "slide-in-right": "slide-in-right 0.6s ease-out",
-        "floating": "floating 3s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
+        floating: "floating 3s ease-in-out infinite",
+        glow: "glow 2s ease-in-out infinite alternate",
         "gradient-x": "gradient-x 15s ease infinite",
       },
     },
