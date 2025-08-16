@@ -51,6 +51,13 @@ export default function Index() {
       status: "Live",
       url: "https://aral-portfolio.netlify.app",
     },
+    {
+      title: "Aral & Vio Wedding",
+      description: "Customized wedding website with elegant design and personal touches",
+      image: "/placeholder.svg",
+      status: "Live",
+      url: "https://aral-vio-wedding.netlify.app",
+    },
   ];
 
   const services = [
