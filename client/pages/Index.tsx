@@ -32,21 +32,31 @@ export default function Index() {
   const projects = [
     {
       title: "Cloud Media Tech Website",
-      description: "Modern IT services website with dark/light themes and animations",
+      description: "Modern IT services portfolio website with dark/light themes and animations",
       image: "/placeholder.svg",
-      status: "Live"
-    },
-    {
-      title: "CoastalConnect",
-      description: "Netlify hosted application currently under development",
-      image: "/placeholder.svg",
-      status: "Under Development"
+      status: "Live",
+      url: "#"
     },
     {
       title: "Decoremporiums",
-      description: "Live e-commerce project with modern design",
+      description: "Interior design website with elegant layouts and modern aesthetics",
       image: "/placeholder.svg",
-      status: "Live"
+      status: "Live",
+      url: "https://www.decoremporiums.com"
+    },
+    {
+      title: "CoastalConnect",
+      description: "Netlify hosted web application with responsive design",
+      image: "/placeholder.svg",
+      status: "Live",
+      url: "https://coastalconnect.netlify.app"
+    },
+    {
+      title: "Aral Portfolio",
+      description: "Personal portfolio website showcasing creative work",
+      image: "/placeholder.svg",
+      status: "Live",
+      url: "#"
     }
   ];
 
