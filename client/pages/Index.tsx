@@ -57,7 +57,7 @@ export default function Index() {
     {
       icon: Code,
       title: "Web Applications",
-      description: "Modern, responsive websites built with cutting-edge technologies"
+      description: "Modern, responsive websites and simple web applications"
     },
     {
       icon: Smartphone,
@@ -71,8 +71,8 @@ export default function Index() {
     },
     {
       icon: Cloud,
-      title: "API & Cloud Integration",
-      description: "Scalable backend solutions and cloud infrastructure"
+      title: "Website Deployment & E-commerce",
+      description: "Simple websites, small e-commerce solutions, and Netlify deployments"
     }
   ];
 
