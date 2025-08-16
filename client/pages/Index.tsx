@@ -465,61 +465,61 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-tech-900 dark:bg-tech-950 text-white py-12">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800" 
-                  alt="Cloud Media Tech" 
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                  alt="Cloud Media Tech"
                   className="h-8 w-auto"
                 />
-                <span className="font-poppins font-bold text-xl">Cloud Media Tech</span>
+                <span className="font-poppins font-bold text-xl text-white">Cloud Media Tech</span>
               </div>
-              <p className="text-gray-300">
+              <p className="text-slate-300">
                 Innovative Web & Mobile Solutions for Every Business
               </p>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+              <h4 className="font-semibold text-lg mb-4 text-white">Quick Links</h4>
               <div className="space-y-2">
-                <a href="#about" className="block text-gray-300 hover:text-white transition-colors">About</a>
-                <a href="#services" className="block text-gray-300 hover:text-white transition-colors">Services</a>
-                <a href="#projects" className="block text-gray-300 hover:text-white transition-colors">Projects</a>
-                <a href="#contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#about" className="block text-slate-300 hover:text-white transition-colors">About</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors">Services</a>
+                <a href="#projects" className="block text-slate-300 hover:text-white transition-colors">Projects</a>
+                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors">Contact</a>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-lg mb-4">Services</h4>
+              <h4 className="font-semibold text-lg mb-4 text-white">Services</h4>
               <div className="space-y-2">
-                <p className="text-gray-300">Web Development</p>
-                <p className="text-gray-300">Mobile Apps</p>
-                <p className="text-gray-300">UI/UX Design</p>
-                <p className="text-gray-300">Cloud Integration</p>
+                <p className="text-slate-300">Web Development</p>
+                <p className="text-slate-300">Mobile Apps</p>
+                <p className="text-slate-300">UI/UX Design</p>
+                <p className="text-slate-300">Cloud Integration</p>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-lg mb-4">Connect</h4>
+              <h4 className="font-semibold text-lg mb-4 text-white">Connect</h4>
               <div className="space-y-2">
-                <a href="mailto:cloudmediatech@gmail.com" className="block text-gray-300 hover:text-white transition-colors">
+                <a href="mailto:cloudmediatech@gmail.com" className="block text-slate-300 hover:text-white transition-colors">
                   cloudmediatech@gmail.com
                 </a>
-                <a href="https://wa.me/918105003858" className="block text-gray-300 hover:text-white transition-colors">
+                <a href="https://wa.me/918105003858" className="block text-slate-300 hover:text-white transition-colors">
                   WhatsApp: +91 8105003858
                 </a>
-                <a href="https://instagram.com/cloudmediatech" className="block text-gray-300 hover:text-white transition-colors">
+                <a href="https://instagram.com/cloudmediatech" className="block text-slate-300 hover:text-white transition-colors">
                   @cloudmediatech
                 </a>
               </div>
             </div>
           </div>
-          
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p className="text-gray-300">
+
+          <div className="border-t border-slate-700 mt-8 pt-8 text-center">
+            <p className="text-slate-300">
               © 2024 Cloud Media Tech. All rights reserved.
             </p>
           </div>
