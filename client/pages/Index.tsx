@@ -31,13 +31,6 @@ export default function Index() {
 
   const projects = [
     {
-      title: "Cloud Media Tech Website",
-      description: "Modern IT services portfolio website with dark/light themes and animations",
-      image: "/placeholder.svg",
-      status: "Live",
-      url: "#"
-    },
-    {
       title: "Decoremporiums",
       description: "Interior design website with elegant layouts and modern aesthetics",
       image: "/placeholder.svg",
@@ -56,7 +49,7 @@ export default function Index() {
       description: "Personal portfolio website showcasing creative work",
       image: "/placeholder.svg",
       status: "Live",
-      url: "#"
+      url: "https://aral-portfolio.netlify.app"
     }
   ];
 
