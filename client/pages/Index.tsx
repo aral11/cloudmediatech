@@ -53,7 +53,8 @@ export default function Index() {
     },
     {
       title: "Aral & Vio Wedding",
-      description: "Customized wedding website with elegant design and personal touches",
+      description:
+        "Customized wedding website with elegant design and personal touches",
       image: "/placeholder.svg",
       status: "Live",
       url: "https://aral-vio-wedding.netlify.app",
@@ -233,8 +234,8 @@ export default function Index() {
                 size="lg"
                 className="bg-tech-500 hover:bg-tech-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 onClick={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Get Started
