@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +60,30 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        tech: {
+          50: "hsl(var(--tech-50))",
+          100: "hsl(var(--tech-100))",
+          200: "hsl(var(--tech-200))",
+          300: "hsl(var(--tech-300))",
+          400: "hsl(var(--tech-400))",
+          500: "hsl(var(--tech-500))",
+          600: "hsl(var(--tech-600))",
+          700: "hsl(var(--tech-700))",
+          800: "hsl(var(--tech-800))",
+          900: "hsl(var(--tech-900))",
+        },
+        cloud: {
+          50: "hsl(var(--cloud-50))",
+          100: "hsl(var(--cloud-100))",
+          200: "hsl(var(--cloud-200))",
+          300: "hsl(var(--cloud-300))",
+          400: "hsl(var(--cloud-400))",
+          500: "hsl(var(--cloud-500))",
+          600: "hsl(var(--cloud-600))",
+          700: "hsl(var(--cloud-700))",
+          800: "hsl(var(--cloud-800))",
+          900: "hsl(var(--cloud-900))",
         },
       },
       borderRadius: {
