@@ -239,58 +239,60 @@ export default function Index() {
             <p className="text-lg text-muted-foreground">Showcasing our latest work and achievements</p>
           </div>
           
-          <div className="relative max-w-4xl mx-auto">
-            <Card className="overflow-hidden animate-fade-in">
-              <div className="relative">
-                <img 
-                  src={projects[currentProject].image} 
-                  alt={projects[currentProject].title}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute top-4 right-4">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    projects[currentProject].status === 'Live' 
-                      ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
-                      : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100'
-                  }`}>
-                    {projects[currentProject].status}
-                  </span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projects.map((project, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="relative">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 right-3">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      project.status === 'Live'
+                        ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
+                        : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100'
+                    }`}>
+                      {project.status}
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    {project.url !== "#" && (
+                      <Button
+                        variant="secondary"
+                        onClick={() => window.open(project.url, '_blank')}
+                        className="bg-white/90 text-black hover:bg-white"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Visit Site
+                      </Button>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-2xl">{projects[currentProject].title}</CardTitle>
-                <CardDescription className="text-lg">{projects[currentProject].description}</CardDescription>
-              </CardHeader>
-            </Card>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevProject}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-accent"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextProject}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-accent"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-            
-            <div className="flex justify-center mt-6 space-x-2">
-              {projects.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentProject(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentProject ? 'bg-tech-500' : 'bg-muted'
-                  }`}
-                />
-              ))}
-            </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">{project.title}</CardTitle>
+                  <CardDescription className="text-sm">{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  {project.url !== "#" ? (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      onClick={() => window.open(project.url, '_blank')}
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Project
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" className="w-full" disabled>
+                      Portfolio Website
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
