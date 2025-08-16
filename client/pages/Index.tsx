@@ -232,7 +232,7 @@ export default function Index() {
             <p className="text-lg text-muted-foreground">Showcasing our latest work and achievements</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {projects.map((project, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="relative">
