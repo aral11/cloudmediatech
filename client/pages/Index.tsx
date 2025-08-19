@@ -593,10 +593,10 @@ export default function Index() {
               <h4 className="font-semibold text-lg mb-4 text-white">Connect</h4>
               <div className="space-y-2">
                 <a
-                  href="mailto:cloudmediatech@gmail.com"
+                  href="mailto:contact@cloudmediatechsolutions.com"
                   className="block text-slate-300 hover:text-white transition-colors"
                 >
-                  cloudmediatech@gmail.com
+                  contact@cloudmediatechsolutions.com
                 </a>
                 <a
                   href="https://wa.me/918105003858"
