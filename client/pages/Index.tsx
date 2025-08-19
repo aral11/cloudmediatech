@@ -451,10 +451,10 @@ export default function Index() {
                     </div>
                     <p className="font-semibold mb-2">Email</p>
                     <a
-                      href="mailto:cloudmediatech@gmail.com"
+                      href="mailto:contact@cloudmediatechsolutions.com"
                       className="text-tech-500 hover:underline text-sm"
                     >
-                      cloudmediatech@gmail.com
+                      contact@cloudmediatechsolutions.com
                     </a>
                   </div>
 
@@ -512,7 +512,7 @@ export default function Index() {
                     variant="outline"
                     className="flex-1"
                     onClick={() =>
-                      window.open("mailto:cloudmediatech@gmail.com", "_blank")
+                      window.open("mailto:contact@cloudmediatechsolutions.com", "_blank")
                     }
                   >
                     <Mail className="h-4 w-4 mr-2" />
