@@ -136,7 +136,7 @@ export default function Index() {
                 href="#coastal-karnataka"
                 className="hover:text-tech-500 transition-colors"
               >
-                Know Us Better
+                Beyond Cloud Media Tech
               </a>
               <a
                 href="#contact"
@@ -201,7 +201,7 @@ export default function Index() {
                   className="hover:text-tech-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Know Us Better
+                  Beyond Cloud Media Tech
                 </a>
                 <a
                   href="#contact"
