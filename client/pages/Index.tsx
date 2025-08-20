@@ -544,7 +544,7 @@ export default function Index() {
                 <Button
                   variant="outline"
                   className="border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-blue-700 dark:text-blue-400 dark:hover:bg-blue-950"
-                  onClick={() => window.open("https://coastalconnect.netlify.app", "_blank")}
+                  onClick={() => window.open("https://coastal-connect.netlify.app/", "_blank")}
                 >
                   <Cloud className="h-4 w-4 mr-2" />
                   Visit CoastalConnect
