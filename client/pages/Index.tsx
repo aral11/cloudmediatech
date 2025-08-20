@@ -133,6 +133,12 @@ export default function Index() {
                 Services
               </a>
               <a
+                href="#coastal-karnataka"
+                className="hover:text-tech-500 transition-colors"
+              >
+                Coastal Karnataka
+              </a>
+              <a
                 href="#contact"
                 className="hover:text-tech-500 transition-colors"
               >
@@ -189,6 +195,13 @@ export default function Index() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Services
+                </a>
+                <a
+                  href="#coastal-karnataka"
+                  className="hover:text-tech-500 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Coastal Karnataka
                 </a>
                 <a
                   href="#contact"
