@@ -41,7 +41,7 @@ export default function Index() {
       title: "CoastalConnect",
       description: "Your one-stop solution for exploring Coastal Karnataka - featuring restaurants, attractions, accommodations, and local experiences in Udupi, Manipal, and beyond",
       image: "/placeholder.svg",
-      status: "Live",
+      status: "Under Development",
       url: "https://coastalconnect.netlify.app",
     },
     {
@@ -136,7 +136,7 @@ export default function Index() {
                 href="#coastal-karnataka"
                 className="hover:text-tech-500 transition-colors"
               >
-                Coastal Karnataka
+                Know Us Better
               </a>
               <a
                 href="#contact"
@@ -201,7 +201,7 @@ export default function Index() {
                   className="hover:text-tech-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Coastal Karnataka
+                  Know Us Better
                 </a>
                 <a
                   href="#contact"
