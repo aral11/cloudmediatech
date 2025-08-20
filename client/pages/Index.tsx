@@ -445,7 +445,7 @@ export default function Index() {
                     <p className="font-semibold mb-2">Email</p>
                     <a
                       href="mailto:contact@cloudmediatechsolutions.com"
-                      className="text-tech-500 hover:underline text-sm"
+                      className="text-tech-500 hover:underline text-sm break-all px-2"
                     >
                       contact@cloudmediatechsolutions.com
                     </a>
