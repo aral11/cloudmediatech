@@ -484,7 +484,7 @@ export default function Index() {
                   </div>
                   <Button
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-4"
-                    onClick={() => window.open("https://coastalconnect.netlify.app", "_blank")}
+                    onClick={() => window.open("https://coastal-connect.netlify.app/", "_blank")}
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Explore CoastalConnect
