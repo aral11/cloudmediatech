@@ -45,13 +45,6 @@ export default function Index() {
       url: "https://coastalconnect.netlify.app",
     },
     {
-      title: "Aral Portfolio",
-      description: "Personal portfolio website showcasing creative work",
-      image: "/placeholder.svg",
-      status: "Live",
-      url: "https://aral-portfolio.netlify.app",
-    },
-    {
       title: "Aral & Vio Wedding",
       description:
         "Customized wedding website with elegant design and personal touches",
@@ -316,7 +309,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <Card
                 key={index}
