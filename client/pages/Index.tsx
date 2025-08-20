@@ -39,9 +39,9 @@ export default function Index() {
     },
     {
       title: "CoastalConnect",
-      description: "Netlify hosted web application with responsive design",
+      description: "Your one-stop solution for exploring Coastal Karnataka - featuring restaurants, attractions, accommodations, and local experiences in Udupi, Manipal, and beyond",
       image: "/placeholder.svg",
-      status: "Under Development",
+      status: "Live",
       url: "https://coastalconnect.netlify.app",
     },
     {
@@ -412,6 +412,135 @@ export default function Index() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Coastal Karnataka Section */}
+      <section id="coastal-karnataka" className="py-20 bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 dark:from-blue-950 dark:via-cyan-950 dark:to-teal-950">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              Discover Coastal Karnataka
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Experience the beauty and culture of Karnataka's coastal region through our comprehensive platforms
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-slide-in-left">
+              <Card className="p-6 shadow-xl border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-blue-600 dark:text-blue-400 flex items-center gap-3">
+                    <Cloud className="h-8 w-8" />
+                    CoastalConnect
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    Your comprehensive guide to Coastal Karnataka
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">
+                    CoastalConnect is our vision of a one-stop digital solution for everything in Coastal Karnataka.
+                    Discover the best restaurants, tourist attractions, accommodations, and authentic local experiences
+                    in Udupi, Manipal, and surrounding coastal towns.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Restaurants & Cafes</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Tourist Attractions</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Accommodations</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <span>Local Experiences</span>
+                    </div>
+                  </div>
+                  <Button
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-4"
+                    onClick={() => window.open("https://coastalconnect.netlify.app", "_blank")}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Explore CoastalConnect
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="animate-slide-in-right">
+              <Card className="p-6 shadow-xl border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-pink-600 dark:text-pink-400 flex items-center gap-3">
+                    <Instagram className="h-8 w-8" />
+                    Coastal Vibes
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    Follow us for daily coastal Karnataka content
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">
+                    Stay connected with the vibrant culture, scenic beauty, and hidden gems of Coastal Karnataka
+                    through our Instagram page @coastalvibes.in. We share regular updates, stunning photography,
+                    local stories, and insider tips about the region.
+                  </p>
+                  <div className="bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900/20 dark:to-purple-900/20 p-4 rounded-lg">
+                    <p className="text-center font-semibold text-pink-700 dark:text-pink-300">
+                      🌊 Do follow for regular updates! 🌊
+                    </p>
+                    <p className="text-center text-sm text-muted-foreground mt-1">
+                      Daily doses of coastal beauty and culture
+                    </p>
+                  </div>
+                  <Button
+                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white mt-4"
+                    onClick={() => window.open("https://instagram.com/coastalvibes.in", "_blank")}
+                  >
+                    <Instagram className="h-4 w-4 mr-2" />
+                    Follow @coastalvibes.in
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center animate-fade-in">
+            <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
+                Experience the Best of Coastal Karnataka
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                From the spiritual serenity of Sri Krishna Temple in Udupi to the pristine beaches of Malpe,
+                from the unique basalt formations of St. Mary's Island to the academic excellence of Manipal University -
+                discover it all through our platforms.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  variant="outline"
+                  className="border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-blue-700 dark:text-blue-400 dark:hover:bg-blue-950"
+                  onClick={() => window.open("https://coastalconnect.netlify.app", "_blank")}
+                >
+                  <Cloud className="h-4 w-4 mr-2" />
+                  Visit CoastalConnect
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-pink-200 text-pink-600 hover:bg-pink-50 dark:border-pink-700 dark:text-pink-400 dark:hover:bg-pink-950"
+                  onClick={() => window.open("https://instagram.com/coastalvibes.in", "_blank")}
+                >
+                  <Instagram className="h-4 w-4 mr-2" />
+                  Follow Coastal Vibes
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
