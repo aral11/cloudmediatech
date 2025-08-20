@@ -464,10 +464,10 @@ export default function Index() {
                     </div>
                     <p className="font-semibold mb-2">WhatsApp</p>
                     <a
-                      href="https://wa.me/918105003858"
+                      href="https://wa.me/918105784258"
                       className="text-tech-500 hover:underline text-sm"
                     >
-                      +91 8105003858
+                      +91 8105784258
                     </a>
                   </div>
 
@@ -489,7 +489,7 @@ export default function Index() {
                   <Button
                     className="bg-green-500 hover:bg-green-600 text-white flex-1"
                     onClick={() =>
-                      window.open("https://wa.me/918105003858", "_blank")
+                      window.open("https://wa.me/918105784258", "_blank")
                     }
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
@@ -599,10 +599,10 @@ export default function Index() {
                   contact@cloudmediatechsolutions.com
                 </a>
                 <a
-                  href="https://wa.me/918105003858"
+                  href="https://wa.me/918105784258"
                   className="block text-slate-300 hover:text-white transition-colors"
                 >
-                  WhatsApp: +91 8105003858
+                  WhatsApp: +91 8105784258
                 </a>
                 <a
                   href="https://instagram.com/cloudmediatech"
