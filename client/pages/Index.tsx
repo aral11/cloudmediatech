@@ -107,7 +107,7 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F1c866cd6ca314033a207be72d9b9a58d?format=webp&width=800"
                 alt="Cloud Media Tech"
                 className="h-8 w-auto animate-floating"
               />
@@ -244,7 +244,7 @@ export default function Index() {
             <div className="flex justify-center animate-slide-in-right">
               <div className="relative">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F1c866cd6ca314033a207be72d9b9a58d?format=webp&width=800"
                   alt="Cloud Media Tech Logo"
                   className="h-64 w-auto animate-floating drop-shadow-2xl"
                 />
@@ -532,7 +532,7 @@ export default function Index() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Ff852809020e04a21be00df828dab13d1%2F8e15f4d2abf54c0787f0c99de6a0d9ac?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F1c866cd6ca314033a207be72d9b9a58d?format=webp&width=800"
                   alt="Cloud Media Tech"
                   className="h-8 w-auto"
                 />
