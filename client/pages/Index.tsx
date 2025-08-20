@@ -42,7 +42,7 @@ export default function Index() {
       description: "Your one-stop solution for exploring Coastal Karnataka - featuring restaurants, attractions, accommodations, and local experiences in Udupi, Manipal, and beyond",
       image: "/placeholder.svg",
       status: "Under Development",
-      url: "https://coastalconnect.netlify.app",
+      url: "https://coastal-connect.netlify.app/",
     },
     {
       title: "Aral & Vio Wedding",
