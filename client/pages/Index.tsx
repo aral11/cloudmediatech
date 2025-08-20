@@ -459,6 +459,11 @@ export default function Index() {
                     Discover the best restaurants, tourist attractions, accommodations, and authentic local experiences
                     in Udupi, Manipal, and surrounding coastal towns.
                   </p>
+                  <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 mt-4">
+                    <p className="text-yellow-800 dark:text-yellow-200 text-sm font-medium">
+                      🚧 Currently Under Development - Stay tuned for updates!
+                    </p>
+                  </div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
