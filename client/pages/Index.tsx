@@ -64,8 +64,9 @@ export default function Index() {
         "Complete online store template. Product catalog with shopping cart and payment integration",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app/ecommerce-demo",
+      url: "https://demotemplates-cmt.netlify.app",
       isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
     {
       title: "CMT Business Website Demo",
