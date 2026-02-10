@@ -396,6 +396,31 @@ export default function Index() {
               </Card>
             ))}
           </div>
+
+          {/* Projects CTA */}
+          <div className="mt-16 text-center animate-fade-in">
+            <div className="bg-gradient-to-r from-tech-500 to-tech-600 rounded-2xl p-8 md:p-12 shadow-lg max-w-2xl mx-auto">
+              <h3 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
+                Your Project Could Be Next
+              </h3>
+              <p className="text-tech-50 mb-8 text-lg">
+                Get started with Cloud Media Tech and bring your ideas to life
+              </p>
+              <Button
+                size="lg"
+                className="bg-white text-tech-600 hover:bg-tech-50 font-semibold px-8 py-6 text-base"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%20have%20a%20project%20I%27d%20like%20to%20discuss.",
+                    "_blank",
+                  )
+                }
+              >
+                <MessageSquare className="h-5 w-5 mr-2" />
+                Chat on WhatsApp
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
