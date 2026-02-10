@@ -526,11 +526,8 @@ export default function Index() {
                 variant="outline"
                 className="px-8 py-6 text-base font-semibold"
                 onClick={() =>
-                window.open(
-                  "https://cmt-platform.com/",
-                  "_blank",
-                )
-              }
+                  window.open("https://cmt-platform.com/", "_blank")
+                }
               >
                 <ExternalLink className="h-5 w-5 mr-2" />
                 View Demo Templates

@@ -44,7 +44,7 @@ export function LaunchOfferModal() {
       <div
         className={cn(
           "fixed inset-0 z-40 bg-black transition-opacity duration-300",
-          isAnimating ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none"
+          isAnimating ? "bg-opacity-50" : "bg-opacity-0 pointer-events-none",
         )}
         onClick={handleBackdropClick}
       />
@@ -55,7 +55,7 @@ export function LaunchOfferModal() {
           "fixed left-1/2 top-1/2 z-50 w-11/12 max-w-md -translate-x-1/2 -translate-y-1/2 transition-all duration-300",
           isAnimating
             ? "scale-100 opacity-100"
-            : "scale-95 opacity-0 pointer-events-none"
+            : "scale-95 opacity-0 pointer-events-none",
         )}
       >
         <div className="relative rounded-2xl bg-white dark:bg-slate-900 shadow-2xl overflow-hidden border border-gray-200 dark:border-slate-700">
@@ -108,7 +108,7 @@ export function LaunchOfferModal() {
                 onClick={() => {
                   window.open(
                     "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20website%20launch%20offer%20starting%20at%20%E2%82%B94%2C999.",
-                    "_blank"
+                    "_blank",
                   );
                   handleClose();
                 }}
