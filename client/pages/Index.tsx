@@ -260,10 +260,7 @@ export default function Index() {
               About Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We specialize in creating smart, scalable, and user-friendly
-              applications — from modern websites to powerful mobile apps on iOS
-              and Android. Our team combines creativity with technology to
-              deliver results that impress.
+              Cloud Media Tech Solutions specializes in building modern, scalable, and user-friendly websites and web applications. We focus on creating professional business websites, ecommerce platforms, and custom web solutions that help businesses build a strong digital presence.
             </p>
           </div>
 
@@ -272,17 +269,17 @@ export default function Index() {
               {
                 icon: Code,
                 title: "Web Development",
-                description: "Modern frameworks and technologies",
+                description: "Modern frameworks and scalable web technologies",
               },
               {
                 icon: Smartphone,
-                title: "Mobile Apps",
-                description: "iOS and Android applications",
+                title: "Ecommerce Websites",
+                description: "Secure, fast, and conversion-focused online stores",
               },
               {
                 icon: Cloud,
-                title: "Custom Solutions",
-                description: "Tailored to your business needs",
+                title: "Custom Web Solutions",
+                description: "Tailored websites and web applications for your business needs",
               },
             ].map((item, index) => (
               <div
