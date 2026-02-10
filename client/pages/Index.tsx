@@ -424,66 +424,42 @@ export default function Index() {
             <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
               Demo Templates
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects
                 .filter((p) => !p.isRealClient)
                 .map((project, index) => (
                   <Card
                     key={index}
-                    className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                    className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in overflow-hidden border border-tech-200 dark:border-tech-800"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="relative">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-tech-50 to-tech-100 dark:from-tech-900 dark:to-tech-800">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute top-3 right-3">
-                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100">
+                      <div className="absolute top-2 right-2">
+                        <span className="px-2 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">
                           {project.status}
                         </span>
                       </div>
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        {project.url !== "#" && (
-                          <Button
-                            variant="secondary"
-                            onClick={() => window.open(project.url, "_blank")}
-                            className="bg-white/90 text-black hover:bg-white"
-                          >
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Visit Site
-                          </Button>
-                        )}
-                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">{project.title}</CardTitle>
-                      <CardDescription className="text-sm">
+                    <CardHeader className="pb-3 pt-4">
+                      <CardTitle className="text-base line-clamp-2">{project.title}</CardTitle>
+                      <CardDescription className="text-xs line-clamp-2 mt-1">
                         {project.description}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      {project.url !== "#" ? (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full"
-                          onClick={() => window.open(project.url, "_blank")}
-                        >
-                          <ExternalLink className="h-4 w-4 mr-2" />
-                          View Project
-                        </Button>
-                      ) : (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full"
-                          disabled
-                        >
-                          Portfolio Website
-                        </Button>
-                      )}
+                      <Button
+                        className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-sm"
+                        onClick={() => window.open(project.url, "_blank")}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Live Demo
+                      </Button>
                     </CardContent>
                   </Card>
                 ))}
