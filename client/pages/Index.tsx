@@ -462,15 +462,35 @@ export default function Index() {
                       <CardDescription className="text-xs line-clamp-2 mt-1">
                         {project.description}
                       </CardDescription>
+                      {project.pricing && (
+                        <p className="text-sm font-semibold text-tech-500 mt-2">
+                          {project.pricing}
+                        </p>
+                      )}
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <Button
-                        className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-sm"
-                        onClick={() => window.open(project.url, "_blank")}
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        View Live Demo
-                      </Button>
+                      <div className="space-y-2">
+                        <Button
+                          className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-sm"
+                          onClick={() => window.open(project.url, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Live Demo
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full text-xs"
+                          onClick={() =>
+                            window.open(
+                              "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20" + project.title + "%20website.",
+                              "_blank",
+                            )
+                          }
+                        >
+                          Get This Website
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 ))}
