@@ -245,6 +245,33 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Launch Offer Banner */}
+      <section className="bg-gradient-to-r from-tech-600 to-tech-500 py-8 px-4">
+        <div className="container mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">
+              🎉 Launch Offer: Websites from ₹2,999
+            </h2>
+            <p className="text-lg text-tech-50 mb-6 max-w-3xl mx-auto">
+              Professional websites for photographers, hotels, small businesses & ecommerce. Customizable templates with fast delivery. Limited Time Only!
+            </p>
+            <Button
+              size="lg"
+              className="bg-white text-tech-600 hover:bg-tech-50 font-semibold px-8 py-6 text-base"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20launch%20website%20offer.",
+                  "_blank",
+                )
+              }
+            >
+              <MessageSquare className="h-5 w-5 mr-2" />
+              Get Launch Offer
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-card">
         <div className="container mx-auto px-4">
