@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LaunchOfferModal } from "@/components/launch-offer-modal";
 import {
   Code,
   Smartphone,
