@@ -537,6 +537,97 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Professional websites at affordable prices. Choose the perfect plan for your business.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Starter Website",
+                price: "₹2,999",
+                description: "Perfect for portfolios & small businesses",
+                features: ["3-5 pages", "Mobile responsive", "Contact form", "WhatsApp integration", "48-hour delivery", "1 month support"],
+                highlighted: false,
+              },
+              {
+                title: "Business Website",
+                price: "₹5,999",
+                description: "For studios, hotels & service businesses",
+                features: ["5-8 pages", "Image gallery", "Services showcase", "WhatsApp integration", "Google Maps embed", "SEO optimization", "3 months support"],
+                highlighted: true,
+              },
+              {
+                title: "Ecommerce Website",
+                price: "₹9,999",
+                description: "Complete online stores",
+                features: ["Unlimited products", "Shopping cart", "Payment gateways", "Order management", "Inventory tracking", "Mobile responsive", "6 months support"],
+                highlighted: false,
+              },
+            ].map((plan, index) => (
+              <Card
+                key={index}
+                className={`animate-fade-in overflow-hidden transition-all duration-300 ${
+                  plan.highlighted
+                    ? "ring-2 ring-tech-500 transform scale-105 shadow-2xl"
+                    : "hover:shadow-lg"
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {plan.highlighted && (
+                  <div className="bg-tech-500 text-white py-2 text-center font-semibold text-sm">
+                    MOST POPULAR
+                  </div>
+                )}
+                <CardHeader className={plan.highlighted ? "pt-4" : ""}>
+                  <CardTitle className="text-2xl">{plan.title}</CardTitle>
+                  <CardDescription className="text-base mt-2">{plan.description}</CardDescription>
+                  <div className="mt-6">
+                    <span className="text-4xl font-bold text-tech-500">{plan.price}</span>
+                    <p className="text-sm text-muted-foreground mt-1">One-time payment</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-tech-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                          <span className="text-xs text-tech-600 font-bold">✓</span>
+                        </div>
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    className={`w-full font-semibold ${
+                      plan.highlighted
+                        ? "bg-tech-500 hover:bg-tech-600 text-white"
+                        : "bg-tech-100 text-tech-700 hover:bg-tech-200 dark:bg-tech-900 dark:text-tech-100 dark:hover:bg-tech-800"
+                    }`}
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20the%20" + plan.title + "%20package.",
+                        "_blank",
+                      )
+                    }
+                  >
+                    Get Started
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
