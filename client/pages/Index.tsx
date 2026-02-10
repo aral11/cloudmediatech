@@ -94,7 +94,8 @@ export default function Index() {
     {
       icon: Cloud,
       title: "Custom Web Solutions",
-      description: "Tailored websites and web applications for your business needs",
+      description:
+        "Tailored websites and web applications for your business needs",
     },
   ];
 
@@ -279,10 +280,14 @@ export default function Index() {
               ✨ Special Launch Offer
             </p>
             <h2 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
-              Special Launch Offer: Professional business websites starting from ₹4,999
+              Special Launch Offer: Professional business websites starting from
+              ₹4,999
             </h2>
             <p className="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
-              Choose a plan that fits your business — Starter <span className="font-bold text-tech-400">₹4,999</span> | Business <span className="font-bold text-tech-400">₹9,999</span> | Ecommerce <span className="font-bold text-tech-400">₹19,999</span>
+              Choose a plan that fits your business — Starter{" "}
+              <span className="font-bold text-tech-400">₹4,999</span> | Business{" "}
+              <span className="font-bold text-tech-400">₹9,999</span> |
+              Ecommerce <span className="font-bold text-tech-400">₹19,999</span>
             </p>
             <Button
               size="lg"
@@ -309,7 +314,11 @@ export default function Index() {
               About Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Cloud Media Tech Solutions specializes in building modern, scalable, and user-friendly websites and web applications. We focus on creating professional business websites, ecommerce platforms, and custom web solutions that help businesses build a strong digital presence.
+              Cloud Media Tech Solutions specializes in building modern,
+              scalable, and user-friendly websites and web applications. We
+              focus on creating professional business websites, ecommerce
+              platforms, and custom web solutions that help businesses build a
+              strong digital presence.
             </p>
           </div>
 
@@ -323,12 +332,14 @@ export default function Index() {
               {
                 icon: Smartphone,
                 title: "Ecommerce Websites",
-                description: "Secure, fast, and conversion-focused online stores",
+                description:
+                  "Secure, fast, and conversion-focused online stores",
               },
               {
                 icon: Cloud,
                 title: "Custom Web Solutions",
-                description: "Tailored websites and web applications for your business needs",
+                description:
+                  "Tailored websites and web applications for your business needs",
               },
             ].map((item, index) => (
               <div
@@ -355,7 +366,9 @@ export default function Index() {
               Our Work
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We've recently launched and are building our portfolio. Below is our first client project and a few demo templates showcasing our work quality.
+              We've recently launched and are building our portfolio. Below is
+              our first client project and a few demo templates showcasing our
+              work quality.
             </p>
           </div>
 
@@ -458,7 +471,9 @@ export default function Index() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <CardHeader className="pb-3 pt-4">
-                      <CardTitle className="text-base line-clamp-2">{project.title}</CardTitle>
+                      <CardTitle className="text-base line-clamp-2">
+                        {project.title}
+                      </CardTitle>
                       <CardDescription className="text-xs line-clamp-2 mt-1">
                         {project.description}
                       </CardDescription>
@@ -483,7 +498,9 @@ export default function Index() {
                           className="w-full text-xs"
                           onClick={() =>
                             window.open(
-                              "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20" + project.title + "%20website.",
+                              "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20" +
+                                project.title +
+                                "%20website.",
                               "_blank",
                             )
                           }
@@ -576,7 +593,8 @@ export default function Index() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional websites at affordable prices. Choose the perfect plan for your business.
+              Professional websites at affordable prices. Choose the perfect
+              plan for your business.
             </p>
           </div>
 
@@ -586,21 +604,44 @@ export default function Index() {
                 title: "Starter Website",
                 price: "₹4,999",
                 description: "Perfect for portfolios & small businesses",
-                features: ["1–3 pages", "Mobile responsive", "Contact form", "WhatsApp integration", "Basic SEO", "1 month support"],
+                features: [
+                  "1–3 pages",
+                  "Mobile responsive",
+                  "Contact form",
+                  "WhatsApp integration",
+                  "Basic SEO",
+                  "1 month support",
+                ],
                 highlighted: false,
               },
               {
                 title: "Business Website",
                 price: "₹9,999",
                 description: "For studios, hotels & service businesses",
-                features: ["5–7 pages", "Image gallery", "Services showcase", "Custom design", "Google Maps embed", "SEO optimization", "3 months support"],
+                features: [
+                  "5–7 pages",
+                  "Image gallery",
+                  "Services showcase",
+                  "Custom design",
+                  "Google Maps embed",
+                  "SEO optimization",
+                  "3 months support",
+                ],
                 highlighted: true,
               },
               {
                 title: "Ecommerce Website",
                 price: "₹19,999",
                 description: "Complete online stores",
-                features: ["Product catalog", "Shopping cart", "Payment gateway integration", "Admin panel", "Inventory tracking", "Mobile responsive", "6 months support"],
+                features: [
+                  "Product catalog",
+                  "Shopping cart",
+                  "Payment gateway integration",
+                  "Admin panel",
+                  "Inventory tracking",
+                  "Mobile responsive",
+                  "6 months support",
+                ],
                 highlighted: false,
               },
             ].map((plan, index) => (
@@ -620,10 +661,16 @@ export default function Index() {
                 )}
                 <CardHeader className={plan.highlighted ? "pt-4" : ""}>
                   <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                  <CardDescription className="text-base mt-2">{plan.description}</CardDescription>
+                  <CardDescription className="text-base mt-2">
+                    {plan.description}
+                  </CardDescription>
                   <div className="mt-6">
-                    <span className="text-4xl font-bold text-tech-500">{plan.price}</span>
-                    <p className="text-sm text-muted-foreground mt-1">One-time payment</p>
+                    <span className="text-4xl font-bold text-tech-500">
+                      {plan.price}
+                    </span>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      One-time payment
+                    </p>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -631,9 +678,13 @@ export default function Index() {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-tech-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
-                          <span className="text-xs text-tech-600 font-bold">✓</span>
+                          <span className="text-xs text-tech-600 font-bold">
+                            ✓
+                          </span>
                         </div>
-                        <span className="text-sm text-muted-foreground">{feature}</span>
+                        <span className="text-sm text-muted-foreground">
+                          {feature}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -645,7 +696,9 @@ export default function Index() {
                     }`}
                     onClick={() =>
                       window.open(
-                        "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20the%20" + plan.title + "%20package.",
+                        "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20the%20" +
+                          plan.title +
+                          "%20package.",
                         "_blank",
                       )
                     }
@@ -854,7 +907,8 @@ export default function Index() {
 
           <div className="border-t border-slate-700 mt-8 pt-8 text-center">
             <p className="text-slate-300">
-              Powered by Cloud Media Tech Solutions – Professional Web Solutions for Businesses
+              Powered by Cloud Media Tech Solutions – Professional Web Solutions
+              for Businesses
             </p>
           </div>
         </div>
