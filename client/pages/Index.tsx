@@ -32,51 +32,70 @@ export default function Index() {
     {
       title: "Decoremporiums",
       description:
-        "Interior design website with elegant layouts and modern aesthetics",
+        "Interior design website with elegant layouts and modern aesthetics. Client: Pavan Kumar, Owner",
       image: "/placeholder.svg",
       status: "Live",
       url: "https://www.decoremporiums.com",
+      isRealClient: true,
     },
     {
-      title: "CoastalConnect",
+      title: "CMT Photo Studio Demo",
       description:
-        "Your one-stop solution for exploring Coastal Karnataka - featuring restaurants, attractions, accommodations, and local experiences in Udupi, Manipal, and beyond",
+        "Perfect for photographers and studios. Portfolio showcase with galleries and booking system",
       image: "/placeholder.svg",
-      status: "Under Development",
-      url: "https://coastal-connect.netlify.app/",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app",
+      isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
     {
-      title: "Aral & Vio Wedding",
+      title: "CMT Hotel Demo",
       description:
-        "Customized wedding website with elegant design and personal touches",
+        "Ideal for hotels and homestays. Room showcase with amenities and booking integration",
       image: "/placeholder.svg",
-      status: "Live",
-      url: "https://aral-vio-wedding.netlify.app",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app",
+      isRealClient: false,
+      pricing: "Starts at ₹4,999",
+    },
+    {
+      title: "CMT Ecommerce Demo",
+      description:
+        "Complete online store template. Product catalog with shopping cart and payment integration",
+      image: "/placeholder.svg",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app",
+      isRealClient: false,
+      pricing: "Starts at ₹4,999",
+    },
+    {
+      title: "CMT Business Website Demo",
+      description:
+        "Professional business website template. Perfect for service businesses and consultancies",
+      image: "/placeholder.svg",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app",
+      isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
   ];
 
   const services = [
     {
       icon: Code,
-      title: "Web Applications",
-      description: "Modern, responsive websites and simple web applications",
+      title: "Web Development",
+      description: "Modern frameworks and scalable web technologies",
     },
     {
       icon: Smartphone,
-      title: "Mobile Apps (iOS & Android)",
-      description:
-        "Native and cross-platform mobile applications for all devices",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, user-centered designs that convert and engage",
+      title: "Ecommerce Websites",
+      description: "Secure, fast, and conversion-focused online stores",
     },
     {
       icon: Cloud,
-      title: "Website Deployment & E-commerce",
+      title: "Custom Web Solutions",
       description:
-        "Simple websites, small e-commerce solutions, and Netlify deployments",
+        "Tailored websites and web applications for your business needs",
     },
   ];
 
@@ -132,12 +151,6 @@ export default function Index() {
                 className="hover:text-tech-500 transition-colors"
               >
                 Services
-              </a>
-              <a
-                href="#coastal-karnataka"
-                className="hover:text-tech-500 transition-colors"
-              >
-                Beyond Cloud Media Tech
               </a>
               <a
                 href="#contact"
@@ -198,13 +211,6 @@ export default function Index() {
                   Services
                 </a>
                 <a
-                  href="#coastal-karnataka"
-                  className="hover:text-tech-500 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Beyond Cloud Media Tech
-                </a>
-                <a
                   href="#contact"
                   className="hover:text-tech-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
@@ -227,9 +233,9 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
               <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
-                <span className="text-foreground">Innovative Web &</span>
+                <span className="text-foreground">Professional Web</span>
                 <br />
-                <span className="text-tech-500">Mobile Solutions</span>
+                <span className="text-tech-500">Solutions & Design</span>
                 <br />
                 <span className="text-foreground">for Every Business</span>
               </h1>
@@ -262,6 +268,44 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Launch Offer Banner */}
+      <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-tech-500/30 py-12 px-4 overflow-hidden animate-fade-in">
+        {/* Subtle background accent */}
+        <div className="absolute inset-0 bg-tech-500/5 backdrop-blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-tech-500/10 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm font-semibold text-tech-400 mb-3 uppercase tracking-wider">
+              ✨ Special Launch Offer
+            </p>
+            <h2 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
+              Special Launch Offer: Professional business websites starting from
+              ₹4,999
+            </h2>
+            <p className="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
+              Choose a plan that fits your business — Starter{" "}
+              <span className="font-bold text-tech-400">₹4,999</span> | Business{" "}
+              <span className="font-bold text-tech-400">₹9,999</span> |
+              Ecommerce <span className="font-bold text-tech-400">₹19,999</span>
+            </p>
+            <Button
+              size="lg"
+              className="bg-tech-500 hover:bg-tech-600 text-white font-semibold px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20website%20plans.%20Can%20you%20tell%20me%20more%20about%20the%20%E2%82%B94999%2C%20%E2%82%B99999%2C%20or%20%E2%82%B919999%20plans%3F",
+                  "_blank",
+                )
+              }
+            >
+              <MessageSquare className="h-5 w-5 mr-2" />
+              Get Launch Offer
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-card">
         <div className="container mx-auto px-4">
@@ -270,10 +314,11 @@ export default function Index() {
               About Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We specialize in creating smart, scalable, and user-friendly
-              applications — from modern websites to powerful mobile apps on iOS
-              and Android. Our team combines creativity with technology to
-              deliver results that impress.
+              Cloud Media Tech Solutions specializes in building modern,
+              scalable, and user-friendly websites and web applications. We
+              focus on creating professional business websites, ecommerce
+              platforms, and custom web solutions that help businesses build a
+              strong digital presence.
             </p>
           </div>
 
@@ -282,17 +327,19 @@ export default function Index() {
               {
                 icon: Code,
                 title: "Web Development",
-                description: "Modern frameworks and technologies",
+                description: "Modern frameworks and scalable web technologies",
               },
               {
                 icon: Smartphone,
-                title: "Mobile Apps",
-                description: "iOS and Android applications",
+                title: "Ecommerce Websites",
+                description:
+                  "Secure, fast, and conversion-focused online stores",
               },
               {
                 icon: Cloud,
-                title: "Custom Solutions",
-                description: "Tailored to your business needs",
+                title: "Custom Web Solutions",
+                description:
+                  "Tailored websites and web applications for your business needs",
               },
             ].map((item, index) => (
               <div
@@ -316,80 +363,188 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
-              Our Projects
+              Our Work
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Showcasing our latest work and achievements
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We've recently launched and are building our portfolio. Below is
+              our first client project and a few demo templates showcasing our
+              work quality.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+          {/* Real Client Projects */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+              Client Projects
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects
+                .filter((p) => p.isRealClient)
+                .map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {project.url !== "#" && (
+                          <Button
+                            variant="secondary"
+                            onClick={() => window.open(project.url, "_blank")}
+                            className="bg-white/90 text-black hover:bg-white"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Visit Site
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                      <CardDescription className="text-sm">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      {project.url !== "#" ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          onClick={() => window.open(project.url, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Project
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          disabled
+                        >
+                          Portfolio Website
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </div>
+
+          {/* Demo Templates */}
+          <div>
+            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+              Demo Templates
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {projects
+                .filter((p) => !p.isRealClient)
+                .map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in overflow-hidden border border-tech-200 dark:border-tech-800"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="relative overflow-hidden bg-gradient-to-br from-tech-50 to-tech-100 dark:from-tech-900 dark:to-tech-800">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-2 right-2">
+                        <span className="px-2 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <CardHeader className="pb-3 pt-4">
+                      <CardTitle className="text-base line-clamp-2">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-xs line-clamp-2 mt-1">
+                        {project.description}
+                      </CardDescription>
+                      {project.pricing && (
+                        <p className="text-sm font-semibold text-tech-500 mt-2">
+                          {project.pricing}
+                        </p>
+                      )}
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-2">
+                        <Button
+                          className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-sm"
+                          onClick={() => window.open(project.url, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Live Demo
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full text-xs"
+                          onClick={() =>
+                            window.open(
+                              "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20" +
+                                project.title +
+                                "%20website.",
+                              "_blank",
+                            )
+                          }
+                        >
+                          Get This Website
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </div>
+
+          {/* Projects CTA */}
+          <div className="mt-20 text-center animate-fade-in space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 py-6 text-base font-semibold"
+                onClick={() =>
+                  window.open(
+                    "https://demotemplates-cmt.netlify.app/",
+                    "_blank",
+                  )
+                }
               >
-                <div className="relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        project.status === "Live"
-                          ? "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100"
-                          : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100"
-                      }`}
-                    >
-                      {project.status}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    {project.url !== "#" && (
-                      <Button
-                        variant="secondary"
-                        onClick={() => window.open(project.url, "_blank")}
-                        className="bg-white/90 text-black hover:bg-white"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Visit Site
-                      </Button>
-                    )}
-                  </div>
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  {project.url !== "#" ? (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                      onClick={() => window.open(project.url, "_blank")}
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                      disabled
-                    >
-                      Portfolio Website
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                <ExternalLink className="h-5 w-5 mr-2" />
+                View Demo Templates
+              </Button>
+              <Button
+                size="lg"
+                className="bg-tech-500 hover:bg-tech-600 text-white px-8 py-6 text-base font-semibold"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%20have%20a%20project%20I%27d%20like%20to%20discuss.",
+                    "_blank",
+                  )
+                }
+              >
+                <MessageSquare className="h-5 w-5 mr-2" />
+                Get Your Project Started
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -430,165 +585,129 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Coastal Karnataka Section */}
-      <section
-        id="coastal-karnataka"
-        className="py-20 bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 dark:from-blue-950 dark:via-cyan-950 dark:to-teal-950"
-      >
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
-              Discover Coastal Karnataka
+              Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Experience the beauty and culture of Karnataka's coastal region
-              through our comprehensive platforms
+              Professional websites at affordable prices. Choose the perfect
+              plan for your business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in-left">
-              <Card className="p-6 shadow-xl border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-blue-600 dark:text-blue-400 flex items-center gap-3">
-                    <Cloud className="h-8 w-8" />
-                    CoastalConnect
-                  </CardTitle>
-                  <CardDescription className="text-base">
-                    Your comprehensive guide to Coastal Karnataka
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Starter Website",
+                price: "₹4,999",
+                description: "Perfect for portfolios & small businesses",
+                features: [
+                  "1–3 pages",
+                  "Mobile responsive",
+                  "Contact form",
+                  "WhatsApp integration",
+                  "Basic SEO",
+                  "1 month support",
+                ],
+                highlighted: false,
+              },
+              {
+                title: "Business Website",
+                price: "₹9,999",
+                description: "For studios, hotels & service businesses",
+                features: [
+                  "5–7 pages",
+                  "Image gallery",
+                  "Services showcase",
+                  "Custom design",
+                  "Google Maps embed",
+                  "SEO optimization",
+                  "3 months support",
+                ],
+                highlighted: true,
+              },
+              {
+                title: "Ecommerce Website",
+                price: "₹19,999",
+                description: "Complete online stores",
+                features: [
+                  "Product catalog",
+                  "Shopping cart",
+                  "Payment gateway integration",
+                  "Admin panel",
+                  "Inventory tracking",
+                  "Mobile responsive",
+                  "6 months support",
+                ],
+                highlighted: false,
+              },
+            ].map((plan, index) => (
+              <Card
+                key={index}
+                className={`animate-fade-in overflow-hidden transition-all duration-300 ${
+                  plan.highlighted
+                    ? "ring-2 ring-tech-500 transform scale-105 shadow-2xl"
+                    : "hover:shadow-lg"
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {plan.highlighted && (
+                  <div className="bg-tech-500 text-white py-2 text-center font-semibold text-sm">
+                    MOST POPULAR
+                  </div>
+                )}
+                <CardHeader className={plan.highlighted ? "pt-4" : ""}>
+                  <CardTitle className="text-2xl">{plan.title}</CardTitle>
+                  <CardDescription className="text-base mt-2">
+                    {plan.description}
                   </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
-                    CoastalConnect is our vision of a one-stop digital solution
-                    for everything in Coastal Karnataka. Discover the best
-                    restaurants, tourist attractions, accommodations, and
-                    authentic local experiences in Udupi, Manipal, and
-                    surrounding coastal towns.
-                  </p>
-                  <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3 mt-4">
-                    <p className="text-yellow-800 dark:text-yellow-200 text-sm font-medium">
-                      🚧 Currently Under Development - Stay tuned for updates!
+                  <div className="mt-6">
+                    <span className="text-4xl font-bold text-tech-500">
+                      {plan.price}
+                    </span>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      One-time payment
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Restaurants & Cafes</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Tourist Attractions</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Accommodations</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span>Local Experiences</span>
-                    </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-tech-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+                          <span className="text-xs text-tech-600 font-bold">
+                            ✓
+                          </span>
+                        </div>
+                        <span className="text-sm text-muted-foreground">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                   <Button
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-4"
+                    className={`w-full font-semibold ${
+                      plan.highlighted
+                        ? "bg-tech-500 hover:bg-tech-600 text-white"
+                        : "bg-tech-100 text-tech-700 hover:bg-tech-200 dark:bg-tech-900 dark:text-tech-100 dark:hover:bg-tech-800"
+                    }`}
                     onClick={() =>
                       window.open(
-                        "https://coastal-connect.netlify.app/",
+                        "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20the%20" +
+                          plan.title +
+                          "%20package.",
                         "_blank",
                       )
                     }
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Explore CoastalConnect
+                    Get Started
                   </Button>
                 </CardContent>
               </Card>
-            </div>
-
-            <div className="animate-slide-in-right">
-              <Card className="p-6 shadow-xl border-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-pink-600 dark:text-pink-400 flex items-center gap-3">
-                    <Instagram className="h-8 w-8" />
-                    Coastal Vibes
-                  </CardTitle>
-                  <CardDescription className="text-base">
-                    Follow us for daily coastal Karnataka content
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
-                    Stay connected with the vibrant culture, scenic beauty, and
-                    hidden gems of Coastal Karnataka through our Instagram page
-                    @coastalvibes.in. We share regular updates, stunning
-                    photography, local stories, and insider tips about the
-                    region.
-                  </p>
-                  <div className="bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900/20 dark:to-purple-900/20 p-4 rounded-lg">
-                    <p className="text-center font-semibold text-pink-700 dark:text-pink-300">
-                      🌊 Do follow for regular updates! 🌊
-                    </p>
-                    <p className="text-center text-sm text-muted-foreground mt-1">
-                      Daily doses of coastal beauty and culture
-                    </p>
-                  </div>
-                  <Button
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white mt-4"
-                    onClick={() =>
-                      window.open(
-                        "https://instagram.com/coastalvibes.in",
-                        "_blank",
-                      )
-                    }
-                  >
-                    <Instagram className="h-4 w-4 mr-2" />
-                    Follow @coastalvibes.in
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          <div className="mt-16 text-center animate-fade-in">
-            <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">
-                Experience the Best of Coastal Karnataka
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                From the spiritual serenity of Sri Krishna Temple in Udupi to
-                the pristine beaches of Malpe, from the unique basalt formations
-                of St. Mary's Island to the academic excellence of Manipal
-                University - discover it all through our platforms.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="outline"
-                  className="border-blue-200 text-blue-600 hover:bg-blue-50 dark:border-blue-700 dark:text-blue-400 dark:hover:bg-blue-950"
-                  onClick={() =>
-                    window.open(
-                      "https://coastal-connect.netlify.app/",
-                      "_blank",
-                    )
-                  }
-                >
-                  <Cloud className="h-4 w-4 mr-2" />
-                  Visit CoastalConnect
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-pink-200 text-pink-600 hover:bg-pink-50 dark:border-pink-700 dark:text-pink-400 dark:hover:bg-pink-950"
-                  onClick={() =>
-                    window.open(
-                      "https://instagram.com/coastalvibes.in",
-                      "_blank",
-                    )
-                  }
-                >
-                  <Instagram className="h-4 w-4 mr-2" />
-                  Follow Coastal Vibes
-                </Button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -714,7 +833,7 @@ export default function Index() {
                 </span>
               </div>
               <p className="text-slate-300">
-                Innovative Web & Mobile Solutions for Every Business
+                Professional Web Solutions for Businesses
               </p>
             </div>
 
@@ -756,9 +875,8 @@ export default function Index() {
               </h4>
               <div className="space-y-2">
                 <p className="text-slate-300">Web Development</p>
-                <p className="text-slate-300">Mobile Apps</p>
-                <p className="text-slate-300">UI/UX Design</p>
-                <p className="text-slate-300">E-commerce & Deployment</p>
+                <p className="text-slate-300">Ecommerce Websites</p>
+                <p className="text-slate-300">Custom Web Solutions</p>
               </div>
             </div>
 
@@ -789,7 +907,8 @@ export default function Index() {
 
           <div className="border-t border-slate-700 mt-8 pt-8 text-center">
             <p className="text-slate-300">
-              © 2024 Cloud Media Tech. All rights reserved.
+              Powered by Cloud Media Tech Solutions – Professional Web Solutions
+              for Businesses
             </p>
           </div>
         </div>
