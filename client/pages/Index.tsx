@@ -115,6 +115,9 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Launch Offer Modal */}
+      <LaunchOfferModal />
+
       {/* Navigation Header */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
