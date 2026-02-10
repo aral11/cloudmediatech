@@ -275,10 +275,10 @@ export default function Index() {
               ✨ Special Launch Offer
             </p>
             <h2 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
-              Special Launch Offer for New Businesses
+              Special Launch Offer: Professional business websites starting from ₹4,999
             </h2>
             <p className="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
-              Get your professional business website starting from <span className="font-bold text-tech-400">₹4,999</span>. Limited-time pricing for photographers, hotels, small businesses & ecommerce.
+              Choose a plan that fits your business — Starter <span className="font-bold text-tech-400">₹4,999</span> | Business <span className="font-bold text-tech-400">₹9,999</span> | Ecommerce <span className="font-bold text-tech-400">₹19,999</span>
             </p>
             <Button
               size="lg"
@@ -560,23 +560,23 @@ export default function Index() {
             {[
               {
                 title: "Starter Website",
-                price: "₹2,999",
+                price: "₹4,999",
                 description: "Perfect for portfolios & small businesses",
-                features: ["3-5 pages", "Mobile responsive", "Contact form", "WhatsApp integration", "48-hour delivery", "1 month support"],
+                features: ["1–3 pages", "Mobile responsive", "Contact form", "WhatsApp integration", "Basic SEO", "1 month support"],
                 highlighted: false,
               },
               {
                 title: "Business Website",
-                price: "₹5,999",
+                price: "₹9,999",
                 description: "For studios, hotels & service businesses",
-                features: ["5-8 pages", "Image gallery", "Services showcase", "WhatsApp integration", "Google Maps embed", "SEO optimization", "3 months support"],
+                features: ["5–7 pages", "Image gallery", "Services showcase", "Custom design", "Google Maps embed", "SEO optimization", "3 months support"],
                 highlighted: true,
               },
               {
                 title: "Ecommerce Website",
-                price: "₹9,999",
+                price: "₹19,999",
                 description: "Complete online stores",
-                features: ["Unlimited products", "Shopping cart", "Payment gateways", "Order management", "Inventory tracking", "Mobile responsive", "6 months support"],
+                features: ["Product catalog", "Shopping cart", "Payment gateway integration", "Admin panel", "Inventory tracking", "Mobile responsive", "6 months support"],
                 highlighted: false,
               },
             ].map((plan, index) => (
