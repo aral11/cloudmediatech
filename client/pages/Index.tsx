@@ -423,8 +423,7 @@ export default function Index() {
                       {project.url !== "#" ? (
                         <Button
                           variant="outline"
-                          size="sm"
-                          className="w-full"
+                          className="w-full h-10 sm:h-11 text-xs sm:text-sm active:scale-95"
                           onClick={() => window.open(project.url, "_blank")}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
@@ -433,8 +432,7 @@ export default function Index() {
                       ) : (
                         <Button
                           variant="outline"
-                          size="sm"
-                          className="w-full"
+                          className="w-full h-10 sm:h-11 text-xs sm:text-sm"
                           disabled
                         >
                           Portfolio Website
