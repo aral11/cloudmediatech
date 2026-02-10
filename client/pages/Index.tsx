@@ -61,25 +61,18 @@ export default function Index() {
   const services = [
     {
       icon: Code,
-      title: "Web Applications",
-      description: "Modern, responsive websites and simple web applications",
+      title: "Web Development",
+      description: "Modern frameworks and scalable web technologies",
     },
     {
       icon: Smartphone,
-      title: "Mobile Apps (iOS & Android)",
-      description:
-        "Native and cross-platform mobile applications for all devices",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, user-centered designs that convert and engage",
+      title: "Ecommerce Websites",
+      description: "Secure, fast, and conversion-focused online stores",
     },
     {
       icon: Cloud,
-      title: "Website Deployment & E-commerce",
-      description:
-        "Simple websites, small e-commerce solutions, and Netlify deployments",
+      title: "Custom Web Solutions",
+      description: "Tailored websites and web applications for your business needs",
     },
   ];
 
