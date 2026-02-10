@@ -489,7 +489,7 @@ export default function Index() {
                     <CardContent className="pt-0">
                       <div className="space-y-2">
                         <Button
-                          className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-sm"
+                          className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold text-xs sm:text-sm h-10 sm:h-11 active:scale-95"
                           onClick={() => window.open(project.url, "_blank")}
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
@@ -497,8 +497,7 @@ export default function Index() {
                         </Button>
                         <Button
                           variant="outline"
-                          size="sm"
-                          className="w-full text-xs"
+                          className="w-full text-xs sm:text-sm h-10 sm:h-11 active:scale-95"
                           onClick={() =>
                             window.open(
                               "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20" +
