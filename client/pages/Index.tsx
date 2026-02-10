@@ -353,8 +353,12 @@ export default function Index() {
                 <div className="bg-tech-100 dark:bg-tech-800 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="h-8 sm:h-10 w-8 sm:w-10 text-tech-500" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">{item.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">{item.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -657,7 +661,9 @@ export default function Index() {
                   </div>
                 )}
                 <CardHeader className={plan.highlighted ? "pt-4" : ""}>
-                  <CardTitle className="text-lg sm:text-2xl">{plan.title}</CardTitle>
+                  <CardTitle className="text-lg sm:text-2xl">
+                    {plan.title}
+                  </CardTitle>
                   <CardDescription className="text-sm sm:text-base mt-2">
                     {plan.description}
                   </CardDescription>
@@ -724,7 +730,9 @@ export default function Index() {
           <div className="max-w-2xl mx-auto">
             <Card className="animate-fade-in">
               <CardHeader className="text-center">
-                <CardTitle className="text-xl sm:text-2xl">Contact Information</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl">
+                  Contact Information
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base">
                   Reach out to us through any of these channels
                 </CardDescription>
@@ -735,7 +743,9 @@ export default function Index() {
                     <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
                       <Mail className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold text-sm sm:text-base mb-2">Email</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">
+                      Email
+                    </p>
                     <a
                       href="mailto:contact@cloudmediatechsolutions.com"
                       className="text-tech-500 hover:underline text-xs sm:text-sm break-all px-2"
@@ -748,7 +758,9 @@ export default function Index() {
                     <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
                       <MessageSquare className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold text-sm sm:text-base mb-2">WhatsApp</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">
+                      WhatsApp
+                    </p>
                     <a
                       href="https://wa.me/918105784258"
                       className="text-tech-500 hover:underline text-xs sm:text-sm"
@@ -761,7 +773,9 @@ export default function Index() {
                     <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
                       <Instagram className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold text-sm sm:text-base mb-2">Instagram</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">
+                      Instagram
+                    </p>
                     <a
                       href="https://instagram.com/cloudmediatech"
                       className="text-tech-500 hover:underline text-xs sm:text-sm"
@@ -878,7 +892,9 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Connect</h4>
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+                Connect
+              </h4>
               <div className="space-y-2 text-xs sm:text-sm">
                 <a
                   href="mailto:contact@cloudmediatechsolutions.com"
@@ -904,7 +920,8 @@ export default function Index() {
 
           <div className="border-t border-slate-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="text-xs sm:text-sm text-slate-300">
-              Powered by Cloud Media Tech Solutions – Professional Web Solutions for Businesses
+              Powered by Cloud Media Tech Solutions – Professional Web Solutions
+              for Businesses
             </p>
           </div>
         </div>
