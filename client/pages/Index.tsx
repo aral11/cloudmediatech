@@ -54,8 +54,9 @@ export default function Index() {
         "Ideal for hotels and homestays. Room showcase with amenities and booking integration",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app/hotel-demo",
+      url: "https://demotemplates-cmt.netlify.app",
       isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
     {
       title: "CMT Ecommerce Demo",
