@@ -289,7 +289,7 @@ export default function Index() {
               className="bg-tech-500 hover:bg-tech-600 text-white font-semibold px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               onClick={() =>
                 window.open(
-                  "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20launch%20website%20offer.",
+                  "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20website%20plans.%20Can%20you%20tell%20me%20more%20about%20the%20%E2%82%B94999%2C%20%E2%82%B99999%2C%20or%20%E2%82%B919999%20plans%3F",
                   "_blank",
                 )
               }
