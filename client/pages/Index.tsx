@@ -39,21 +39,39 @@ export default function Index() {
       isRealClient: true,
     },
     {
-      title: "Demo Project (Template Example)",
+      title: "CMT Photo Studio Demo",
       description:
-        "Modern e-commerce platform showcasing our web development capabilities",
+        "Perfect for photographers and studios. Portfolio showcase with galleries and booking system",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "#",
+      url: "https://demotemplates-cmt.netlify.app/photo-demo",
       isRealClient: false,
     },
     {
-      title: "Upcoming Client Project",
+      title: "CMT Hotel Demo",
       description:
-        "New project launching soon. We're building innovative solutions for our clients",
+        "Ideal for hotels and homestays. Room showcase with amenities and booking integration",
       image: "/placeholder.svg",
-      status: "Coming Soon",
-      url: "#",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app/hotel-demo",
+      isRealClient: false,
+    },
+    {
+      title: "CMT Ecommerce Demo",
+      description:
+        "Complete online store template. Product catalog with shopping cart and payment integration",
+      image: "/placeholder.svg",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app/ecommerce-demo",
+      isRealClient: false,
+    },
+    {
+      title: "CMT Business Website Demo",
+      description:
+        "Professional business website template. Perfect for service businesses and consultancies",
+      image: "/placeholder.svg",
+      status: "Demo",
+      url: "https://demotemplates-cmt.netlify.app/",
       isRealClient: false,
     },
   ];
