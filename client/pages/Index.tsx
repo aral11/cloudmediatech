@@ -210,9 +210,9 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
               <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
-                <span className="text-foreground">Innovative Web &</span>
+                <span className="text-foreground">Professional Web</span>
                 <br />
-                <span className="text-tech-500">Mobile Solutions</span>
+                <span className="text-tech-500">Solutions & Design</span>
                 <br />
                 <span className="text-foreground">for Every Business</span>
               </h1>
