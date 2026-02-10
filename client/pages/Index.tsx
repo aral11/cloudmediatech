@@ -735,48 +735,48 @@ export default function Index() {
               <CardContent className="space-y-6 sm:space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                   <div className="text-center group">
-                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
-                      <Mail className="h-8 w-8" />
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
+                      <Mail className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold mb-2">Email</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">Email</p>
                     <a
                       href="mailto:contact@cloudmediatechsolutions.com"
-                      className="text-tech-500 hover:underline text-sm break-all px-2"
+                      className="text-tech-500 hover:underline text-xs sm:text-sm break-all px-2"
                     >
                       contact@cloudmediatechsolutions.com
                     </a>
                   </div>
 
                   <div className="text-center group">
-                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
-                      <MessageSquare className="h-8 w-8" />
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                      <MessageSquare className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold mb-2">WhatsApp</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">WhatsApp</p>
                     <a
                       href="https://wa.me/918105784258"
-                      className="text-tech-500 hover:underline text-sm"
+                      className="text-tech-500 hover:underline text-xs sm:text-sm"
                     >
                       +91 8105784258
                     </a>
                   </div>
 
                   <div className="text-center group">
-                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
-                      <Instagram className="h-8 w-8" />
+                    <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-3 sm:p-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-pink-500 group-hover:text-white transition-colors duration-300">
+                      <Instagram className="h-6 sm:h-8 w-6 sm:w-8" />
                     </div>
-                    <p className="font-semibold mb-2">Instagram</p>
+                    <p className="font-semibold text-sm sm:text-base mb-2">Instagram</p>
                     <a
                       href="https://instagram.com/cloudmediatech"
-                      className="text-tech-500 hover:underline text-sm"
+                      className="text-tech-500 hover:underline text-xs sm:text-sm"
                     >
                       @cloudmediatech
                     </a>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-border">
+                <div className="flex flex-col gap-3 sm:gap-4 pt-4 sm:pt-6 border-t border-border">
                   <Button
-                    className="bg-green-500 hover:bg-green-600 text-white flex-1"
+                    className="bg-green-500 hover:bg-green-600 text-white w-full h-12 sm:h-14 text-sm sm:text-base font-semibold active:scale-95"
                     onClick={() =>
                       window.open("https://wa.me/918105784258", "_blank")
                     }
@@ -786,7 +786,7 @@ export default function Index() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="flex-1"
+                    className="h-12 sm:h-14 text-sm sm:text-base font-semibold w-full active:scale-95"
                     onClick={() =>
                       window.open(
                         "https://instagram.com/cloudmediatech",
@@ -799,7 +799,7 @@ export default function Index() {
                   </Button>
                   <Button
                     variant="outline"
-                    className="flex-1"
+                    className="h-12 sm:h-14 text-sm sm:text-base font-semibold w-full active:scale-95"
                     onClick={() =>
                       window.open(
                         "mailto:contact@cloudmediatechsolutions.com",
