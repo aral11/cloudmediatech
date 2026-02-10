@@ -264,18 +264,25 @@ export default function Index() {
       </section>
 
       {/* Launch Offer Banner */}
-      <section className="bg-gradient-to-r from-tech-600 to-tech-500 py-8 px-4">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-white mb-3">
-              🎉 Launch Offer: Websites from ₹2,999
+      <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-tech-500/30 py-12 px-4 overflow-hidden animate-fade-in">
+        {/* Subtle background accent */}
+        <div className="absolute inset-0 bg-tech-500/5 backdrop-blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-tech-500/10 rounded-full blur-3xl"></div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm font-semibold text-tech-400 mb-3 uppercase tracking-wider">
+              ✨ Special Launch Offer
+            </p>
+            <h2 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
+              Special Launch Offer for New Businesses
             </h2>
-            <p className="text-lg text-tech-50 mb-6 max-w-3xl mx-auto">
-              Professional websites for photographers, hotels, small businesses & ecommerce. Customizable templates with fast delivery. Limited Time Only!
+            <p className="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
+              Get your professional business website starting from <span className="font-bold text-tech-400">₹4,999</span>. Limited-time pricing for photographers, hotels, small businesses & ecommerce.
             </p>
             <Button
               size="lg"
-              className="bg-white text-tech-600 hover:bg-tech-50 font-semibold px-8 py-6 text-base"
+              className="bg-tech-500 hover:bg-tech-600 text-white font-semibold px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               onClick={() =>
                 window.open(
                   "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20launch%20website%20offer.",
