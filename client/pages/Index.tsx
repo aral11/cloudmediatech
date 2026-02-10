@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LaunchOfferModal } from "@/components/launch-offer-modal";
 import {
   Code,
   Smartphone,
@@ -44,7 +45,7 @@ export default function Index() {
         "Perfect for photographers and studios. Portfolio showcase with galleries and booking system",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app",
+      url: "https://cmt-platform.com/",
       isRealClient: false,
       pricing: "Starts at ₹4,999",
     },
@@ -54,7 +55,7 @@ export default function Index() {
         "Ideal for hotels and homestays. Room showcase with amenities and booking integration",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app",
+      url: "https://cmt-platform.com/",
       isRealClient: false,
       pricing: "Starts at ₹4,999",
     },
@@ -64,7 +65,7 @@ export default function Index() {
         "Complete online store template. Product catalog with shopping cart and payment integration",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app",
+      url: "https://cmt-platform.com/",
       isRealClient: false,
       pricing: "Starts at ₹4,999",
     },
@@ -74,7 +75,7 @@ export default function Index() {
         "Professional business website template. Perfect for service businesses and consultancies",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app",
+      url: "https://cmt-platform.com/",
       isRealClient: false,
       pricing: "Starts at ₹4,999",
     },
@@ -114,6 +115,9 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Launch Offer Modal */}
+      <LaunchOfferModal />
+
       {/* Navigation Header */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="container mx-auto px-4 py-4">
@@ -522,10 +526,7 @@ export default function Index() {
                 variant="outline"
                 className="px-8 py-6 text-base font-semibold"
                 onClick={() =>
-                  window.open(
-                    "https://demotemplates-cmt.netlify.app/",
-                    "_blank",
-                  )
+                  window.open("https://cmt-platform.com/", "_blank")
                 }
               >
                 <ExternalLink className="h-5 w-5 mr-2" />
