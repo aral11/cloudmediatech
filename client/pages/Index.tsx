@@ -319,10 +319,10 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
-              Our Projects
+              Our Work
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Showcasing our latest work and achievements
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We've just launched and are building our portfolio. Here's a look at our first client project and selected demo examples.
             </p>
           </div>
 
