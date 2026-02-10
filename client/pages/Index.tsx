@@ -120,15 +120,15 @@ export default function Index() {
 
       {/* Navigation Header */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F1c866cd6ca314033a207be72d9b9a58d?format=webp&width=800"
                 alt="Cloud Media Tech"
-                className="h-8 w-auto animate-floating"
+                className="h-7 sm:h-8 w-auto animate-floating"
               />
-              <span className="font-poppins font-bold text-xl text-foreground">
+              <span className="font-poppins font-bold text-lg sm:text-xl text-foreground hidden sm:inline">
                 Cloud Media Tech
               </span>
             </div>
@@ -234,7 +234,7 @@ export default function Index() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-tech-50 via-cloud-50 to-background animate-gradient-x bg-[length:400%_400%]"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="animate-slide-in-left">
               <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6">
                 <span className="text-foreground">Professional Web</span>
@@ -249,7 +249,7 @@ export default function Index() {
               </p>
               <Button
                 size="lg"
-                className="bg-tech-500 hover:bg-tech-600 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-tech-500 hover:bg-tech-600 text-white px-6 sm:px-8 py-6 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 h-12 sm:h-14"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
@@ -273,21 +273,20 @@ export default function Index() {
       </section>
 
       {/* Launch Offer Banner */}
-      <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-tech-500/30 py-12 px-4 overflow-hidden animate-fade-in">
+      <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-tech-500/30 py-8 sm:py-12 px-4 overflow-hidden animate-fade-in">
         {/* Subtle background accent */}
         <div className="absolute inset-0 bg-tech-500/5 backdrop-blur-3xl"></div>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-tech-500/10 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm font-semibold text-tech-400 mb-3 uppercase tracking-wider">
+            <p className="text-xs sm:text-sm font-semibold text-tech-400 mb-3 uppercase tracking-wider">
               ✨ Special Launch Offer
             </p>
-            <h2 className="text-2xl md:text-3xl font-poppins font-bold text-white mb-4">
-              Special Launch Offer: Professional business websites starting from
-              ₹4,999
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-poppins font-bold text-white mb-4 leading-tight">
+              Professional business websites starting from ₹4,999
             </h2>
-            <p className="text-base md:text-lg text-slate-300 mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-6 sm:mb-8 leading-relaxed">
               Choose a plan that fits your business — Starter{" "}
               <span className="font-bold text-tech-400">₹4,999</span> | Business{" "}
               <span className="font-bold text-tech-400">₹9,999</span> |
@@ -295,7 +294,7 @@ export default function Index() {
             </p>
             <Button
               size="lg"
-              className="bg-tech-500 hover:bg-tech-600 text-white font-semibold px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-tech-500 hover:bg-tech-600 text-white font-semibold px-6 sm:px-8 py-6 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 h-12 sm:h-14"
               onClick={() =>
                 window.open(
                   "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%27m%20interested%20in%20your%20website%20plans.%20Can%20you%20tell%20me%20more%20about%20the%20%E2%82%B94999%2C%20%E2%82%B99999%2C%20or%20%E2%82%B919999%20plans%3F",
@@ -311,10 +310,10 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-card">
+      <section id="about" className="py-12 sm:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4 sm:mb-6">
               About Us
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -326,7 +325,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 icon: Code,
@@ -351,11 +350,11 @@ export default function Index() {
                 className="text-center group animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="bg-tech-100 dark:bg-tech-800 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="h-10 w-10 text-tech-500" />
+                <div className="bg-tech-100 dark:bg-tech-800 rounded-full w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <item.icon className="h-8 sm:h-10 w-8 sm:w-10 text-tech-500" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">{item.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>
@@ -363,13 +362,13 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-12 sm:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4 sm:mb-6">
               Our Work
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We've recently launched and are building our portfolio. Below is
               our first client project and a few demo templates showcasing our
               work quality.
@@ -377,11 +376,11 @@ export default function Index() {
           </div>
 
           {/* Real Client Projects */}
-          <div className="mb-20">
-            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+          <div className="mb-16 sm:mb-20">
+            <h3 className="text-xl sm:text-2xl font-poppins font-semibold mb-6 sm:mb-8 text-foreground">
               Client Projects
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {projects
                 .filter((p) => p.isRealClient)
                 .map((project, index) => (
@@ -449,10 +448,10 @@ export default function Index() {
 
           {/* Demo Templates */}
           <div>
-            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+            <h3 className="text-xl sm:text-2xl font-poppins font-semibold mb-6 sm:mb-8 text-foreground">
               Demo Templates
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {projects
                 .filter((p) => !p.isRealClient)
                 .map((project, index) => (
@@ -519,22 +518,22 @@ export default function Index() {
           </div>
 
           {/* Projects CTA */}
-          <div className="mt-20 text-center animate-fade-in space-y-6">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-12 sm:mt-20 text-center animate-fade-in space-y-4 sm:space-y-6">
+            <div className="flex flex-col gap-3 sm:gap-4 justify-center max-w-md mx-auto sm:max-w-none sm:flex-row">
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-base font-semibold"
+                className="px-6 sm:px-8 py-6 text-sm sm:text-base font-semibold h-12 sm:h-14 flex-1 sm:flex-none"
                 onClick={() =>
                   window.open("https://cmt-platform.com/", "_blank")
                 }
               >
                 <ExternalLink className="h-5 w-5 mr-2" />
-                View Demo Templates
+                View Demo
               </Button>
               <Button
                 size="lg"
-                className="bg-tech-500 hover:bg-tech-600 text-white px-8 py-6 text-base font-semibold"
+                className="bg-tech-500 hover:bg-tech-600 text-white px-6 sm:px-8 py-6 text-sm sm:text-base font-semibold h-12 sm:h-14 flex-1 sm:flex-none active:scale-95"
                 onClick={() =>
                   window.open(
                     "https://wa.me/918105784258?text=Hi%20Cloud%20Media%20Tech%2C%20I%20have%20a%20project%20I%27d%20like%20to%20discuss.",
@@ -543,7 +542,7 @@ export default function Index() {
                 }
               >
                 <MessageSquare className="h-5 w-5 mr-2" />
-                Get Your Project Started
+                Start Project
               </Button>
             </div>
           </div>
@@ -551,18 +550,18 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-card">
+      <section id="services" className="py-12 sm:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4 sm:mb-6">
               Our Services
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
               Comprehensive solutions for your digital needs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -587,19 +586,19 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-card">
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-background to-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4 sm:mb-6">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Professional websites at affordable prices. Choose the perfect
               plan for your business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {[
               {
                 title: "Starter Website",
@@ -661,8 +660,8 @@ export default function Index() {
                   </div>
                 )}
                 <CardHeader className={plan.highlighted ? "pt-4" : ""}>
-                  <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                  <CardDescription className="text-base mt-2">
+                  <CardTitle className="text-lg sm:text-2xl">{plan.title}</CardTitle>
+                  <CardDescription className="text-sm sm:text-base mt-2">
                     {plan.description}
                   </CardDescription>
                   <div className="mt-6">
@@ -690,7 +689,7 @@ export default function Index() {
                     ))}
                   </div>
                   <Button
-                    className={`w-full font-semibold ${
+                    className={`w-full font-semibold h-12 sm:h-14 text-sm sm:text-base transition-all active:scale-95 ${
                       plan.highlighted
                         ? "bg-tech-500 hover:bg-tech-600 text-white"
                         : "bg-tech-100 text-tech-700 hover:bg-tech-200 dark:bg-tech-900 dark:text-tech-100 dark:hover:bg-tech-800"
@@ -714,13 +713,13 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-12 sm:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-poppins font-bold mb-4 sm:mb-6">
               Get In Touch
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
               Ready to start your next project? Let's talk!
             </p>
           </div>
@@ -728,13 +727,13 @@ export default function Index() {
           <div className="max-w-2xl mx-auto">
             <Card className="animate-fade-in">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-xl sm:text-2xl">Contact Information</CardTitle>
+                <CardDescription className="text-sm sm:text-base">
                   Reach out to us through any of these channels
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
-                <div className="grid md:grid-cols-3 gap-6">
+              <CardContent className="space-y-6 sm:space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                   <div className="text-center group">
                     <div className="bg-tech-100 dark:bg-tech-800 rounded-full p-4 w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-tech-500 group-hover:text-white transition-colors duration-300">
                       <Mail className="h-8 w-8" />
@@ -819,30 +818,30 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 mt-16">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 sm:py-12 mt-12 sm:mt-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F1c866cd6ca314033a207be72d9b9a58d?format=webp&width=800"
                   alt="Cloud Media Tech"
-                  className="h-8 w-auto"
+                  className="h-7 sm:h-8 w-auto"
                 />
-                <span className="font-poppins font-bold text-xl text-white">
+                <span className="font-poppins font-bold text-lg sm:text-xl text-white">
                   Cloud Media Tech
                 </span>
               </div>
-              <p className="text-slate-300">
+              <p className="text-xs sm:text-sm text-slate-300">
                 Professional Web Solutions for Businesses
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-white">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
                 Quick Links
               </h4>
-              <div className="space-y-2">
+              <div className="space-y-2 text-xs sm:text-sm">
                 <a
                   href="#about"
                   className="block text-slate-300 hover:text-white transition-colors"
@@ -871,22 +870,22 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-white">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
                 Services
               </h4>
-              <div className="space-y-2">
-                <p className="text-slate-300">Web Development</p>
-                <p className="text-slate-300">Ecommerce Websites</p>
-                <p className="text-slate-300">Custom Web Solutions</p>
+              <div className="space-y-2 text-xs sm:text-sm text-slate-300">
+                <p>Web Development</p>
+                <p>Ecommerce Websites</p>
+                <p>Custom Web Solutions</p>
               </div>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-4 text-white">Connect</h4>
-              <div className="space-y-2">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Connect</h4>
+              <div className="space-y-2 text-xs sm:text-sm">
                 <a
                   href="mailto:contact@cloudmediatechsolutions.com"
-                  className="block text-slate-300 hover:text-white transition-colors"
+                  className="block text-slate-300 hover:text-white transition-colors break-all"
                 >
                   contact@cloudmediatechsolutions.com
                 </a>
@@ -906,10 +905,9 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-            <p className="text-slate-300">
-              Powered by Cloud Media Tech Solutions – Professional Web Solutions
-              for Businesses
+          <div className="border-t border-slate-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
+            <p className="text-xs sm:text-sm text-slate-300">
+              Powered by Cloud Media Tech Solutions – Professional Web Solutions for Businesses
             </p>
           </div>
         </div>
