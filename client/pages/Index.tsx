@@ -299,79 +299,150 @@ export default function Index() {
               Our Work
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We've just launched and are building our portfolio. Here's a look at our first client project and selected demo examples.
+              We've recently launched and are building our portfolio. Below is our first client project and a few demo templates showcasing our work quality.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        project.status === "Live"
-                          ? "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100"
-                          : project.status === "Demo"
-                            ? "bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100"
-                            : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100"
-                      }`}
-                    >
-                      {project.status}
-                    </span>
-                  </div>
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    {project.url !== "#" && (
-                      <Button
-                        variant="secondary"
-                        onClick={() => window.open(project.url, "_blank")}
-                        className="bg-white/90 text-black hover:bg-white"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Visit Site
-                      </Button>
-                    )}
-                  </div>
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  {project.url !== "#" ? (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                      onClick={() => window.open(project.url, "_blank")}
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full"
-                      disabled
-                    >
-                      Portfolio Website
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+          {/* Real Client Projects */}
+          <div className="mb-20">
+            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+              Client Projects
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects
+                .filter((p) => p.isRealClient)
+                .map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {project.url !== "#" && (
+                          <Button
+                            variant="secondary"
+                            onClick={() => window.open(project.url, "_blank")}
+                            className="bg-white/90 text-black hover:bg-white"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Visit Site
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                      <CardDescription className="text-sm">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      {project.url !== "#" ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          onClick={() => window.open(project.url, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Project
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          disabled
+                        >
+                          Portfolio Website
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </div>
+
+          {/* Demo Templates */}
+          <div>
+            <h3 className="text-2xl font-poppins font-semibold mb-8 text-foreground">
+              Demo Templates
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects
+                .filter((p) => !p.isRealClient)
+                .map((project, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in overflow-hidden"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-3 right-3">
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100">
+                          {project.status}
+                        </span>
+                      </div>
+                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {project.url !== "#" && (
+                          <Button
+                            variant="secondary"
+                            onClick={() => window.open(project.url, "_blank")}
+                            className="bg-white/90 text-black hover:bg-white"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Visit Site
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-lg">{project.title}</CardTitle>
+                      <CardDescription className="text-sm">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      {project.url !== "#" ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          onClick={() => window.open(project.url, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Project
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full"
+                          disabled
+                        >
+                          Portfolio Website
+                        </Button>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
           </div>
 
           {/* Projects CTA */}
