@@ -137,12 +137,6 @@ export default function Index() {
                 Services
               </a>
               <a
-                href="#coastal-karnataka"
-                className="hover:text-tech-500 transition-colors"
-              >
-                Beyond Cloud Media Tech
-              </a>
-              <a
                 href="#contact"
                 className="hover:text-tech-500 transition-colors"
               >
