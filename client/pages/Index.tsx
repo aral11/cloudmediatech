@@ -44,8 +44,9 @@ export default function Index() {
         "Perfect for photographers and studios. Portfolio showcase with galleries and booking system",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app/photo-demo",
+      url: "https://demotemplates-cmt.netlify.app",
       isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
     {
       title: "CMT Hotel Demo",
