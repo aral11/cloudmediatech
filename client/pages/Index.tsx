@@ -637,7 +637,7 @@ export default function Index() {
                 </span>
               </div>
               <p className="text-slate-300">
-                Innovative Web & Mobile Solutions for Every Business
+                Professional Web Solutions for Businesses
               </p>
             </div>
 
@@ -679,9 +679,8 @@ export default function Index() {
               </h4>
               <div className="space-y-2">
                 <p className="text-slate-300">Web Development</p>
-                <p className="text-slate-300">Mobile Apps</p>
-                <p className="text-slate-300">UI/UX Design</p>
-                <p className="text-slate-300">E-commerce & Deployment</p>
+                <p className="text-slate-300">Ecommerce Websites</p>
+                <p className="text-slate-300">Custom Web Solutions</p>
               </div>
             </div>
 
@@ -712,7 +711,7 @@ export default function Index() {
 
           <div className="border-t border-slate-700 mt-8 pt-8 text-center">
             <p className="text-slate-300">
-              © 2024 Cloud Media Tech. All rights reserved.
+              Powered by Cloud Media Tech Solutions – Professional Web Solutions for Businesses
             </p>
           </div>
         </div>
