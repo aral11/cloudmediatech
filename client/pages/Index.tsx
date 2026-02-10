@@ -32,26 +32,29 @@ export default function Index() {
     {
       title: "Decoremporiums",
       description:
-        "Interior design website with elegant layouts and modern aesthetics",
+        "Interior design website with elegant layouts and modern aesthetics. Client: Pavan Kumar, Owner",
       image: "/placeholder.svg",
       status: "Live",
       url: "https://www.decoremporiums.com",
+      isRealClient: true,
     },
     {
-      title: "CoastalConnect",
+      title: "Demo Project (Template Example)",
       description:
-        "Your one-stop solution for exploring Coastal Karnataka - featuring restaurants, attractions, accommodations, and local experiences in Udupi, Manipal, and beyond",
+        "Modern e-commerce platform showcasing our web development capabilities",
       image: "/placeholder.svg",
-      status: "Under Development",
-      url: "https://coastal-connect.netlify.app/",
+      status: "Demo",
+      url: "#",
+      isRealClient: false,
     },
     {
-      title: "Aral & Vio Wedding",
+      title: "Upcoming Client Project",
       description:
-        "Customized wedding website with elegant design and personal touches",
+        "New project launching soon. We're building innovative solutions for our clients",
       image: "/placeholder.svg",
-      status: "Live",
-      url: "https://aral-vio-wedding.netlify.app",
+      status: "Coming Soon",
+      url: "#",
+      isRealClient: false,
     },
   ];
 
