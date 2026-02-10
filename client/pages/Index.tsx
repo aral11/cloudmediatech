@@ -74,8 +74,9 @@ export default function Index() {
         "Professional business website template. Perfect for service businesses and consultancies",
       image: "/placeholder.svg",
       status: "Demo",
-      url: "https://demotemplates-cmt.netlify.app/",
+      url: "https://demotemplates-cmt.netlify.app",
       isRealClient: false,
+      pricing: "Starts at ₹4,999",
     },
   ];
 
