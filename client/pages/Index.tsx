@@ -344,7 +344,9 @@ export default function Index() {
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         project.status === "Live"
                           ? "bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100"
-                          : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100"
+                          : project.status === "Demo"
+                            ? "bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100"
+                            : "bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100"
                       }`}
                     >
                       {project.status}
