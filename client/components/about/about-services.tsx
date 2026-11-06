@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { ABOUT_SERVICES, type AboutService } from "@/lib/about-content";
+import { ABOUT_SERVICES, SERVICES_HEADING, type AboutService } from "@/lib/about-content";
 
 function ServiceCard({ service }: { service: AboutService }) {
   const Icon = service.icon;
@@ -30,21 +30,21 @@ export function AboutServices() {
     <section
       id="services"
       aria-labelledby="about-services-heading"
-      className="py-16 sm:py-24 bg-muted/40"
+      className="scroll-mt-24 py-16 sm:py-24 bg-background"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+          <p className="text-sm font-semibold uppercase tracking-wider text-tech-500 mb-3">
+            What We Do
+          </p>
           <h2
             id="about-services-heading"
-            className="text-3xl sm:text-4xl font-poppins font-bold mb-4"
+            className="text-3xl sm:text-4xl font-poppins font-bold"
           >
-            Our Services
+            {SERVICES_HEADING}
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
-            Everything your business needs to look professional and get found online, from one team.
-          </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {ABOUT_SERVICES.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}

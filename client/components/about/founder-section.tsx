@@ -44,7 +44,9 @@ export function FounderSection() {
             <h2 id="founder-heading" className="text-3xl sm:text-4xl font-poppins font-bold mb-2">
               {FOUNDER.name}
             </h2>
-            <p className="text-base sm:text-lg text-cloud-200 mb-6">{FOUNDER.designation}</p>
+            <p className="text-base sm:text-lg font-semibold text-cloud-200 mb-6">
+              {FOUNDER.designation}
+            </p>
 
             <div className="space-y-4 text-base sm:text-lg text-slate-300 leading-relaxed">
               {FOUNDER.paragraphs.map((paragraph) => (

@@ -29,7 +29,10 @@ export function AboutHero() {
                 size="lg"
                 className="bg-tech-500 hover:bg-tech-600 text-white font-semibold h-12 sm:h-14 px-6 sm:px-8 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
               >
-                <Link to={HERO.primaryCta.to}>{HERO.primaryCta.label}</Link>
+                <Link to={HERO.primaryCta.to}>
+                  {HERO.primaryCta.label}
+                  <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                </Link>
               </Button>
               <Button
                 asChild
@@ -37,10 +40,7 @@ export function AboutHero() {
                 variant="outline"
                 className="h-12 sm:h-14 px-6 sm:px-8 rounded-xl border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
               >
-                <Link to={HERO.secondaryCta.to}>
-                  {HERO.secondaryCta.label}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <Link to={HERO.secondaryCta.to}>{HERO.secondaryCta.label}</Link>
               </Button>
             </div>
           </div>

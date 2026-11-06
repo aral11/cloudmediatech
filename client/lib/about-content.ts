@@ -1,23 +1,25 @@
 import {
   AppWindow,
+  Briefcase,
+  Building2,
   Globe,
-  HeartHandshake,
-  Layers,
+  Hotel,
   Lightbulb,
   Megaphone,
   Palette,
   Rocket,
   Search,
   Server,
+  ShoppingBag,
   ShoppingCart,
-  Sparkles,
   Store,
-  Target,
-  TrendingUp,
+  UtensilsCrossed,
+  Users,
   Wallet,
   Workflow,
   Wrench,
-  Building2,
+  Accessibility,
+  HeartHandshake,
   type LucideIcon,
 } from "lucide-react";
 
@@ -26,46 +28,89 @@ export const FOUNDER_PHOTO_URL: string | null =
 
 export const HERO = {
   eyebrow: "Affordable Website Development for Businesses.",
-  headline: "Your Business Deserves to Be Online.",
+  headline: "Technology Should Be Accessible to Every Business.",
   description:
-    "We believe every business deserves a professional digital identity. From small businesses and startups to growing enterprises, we make websites and digital solutions accessible, affordable and simple.",
-  primaryCta: { label: "Get Started", to: "/contact" },
-  secondaryCta: { label: "Explore Our Services", to: "/services" },
+    "At Cloud Media Tech Solutions, we believe every business deserves a professional digital presence. We make website development and digital solutions affordable, accessible and simple for businesses of every size.",
+  primaryCta: { label: "Explore Our Services", to: "/services" },
+  secondaryCta: { label: "Get in Touch", to: "/contact" },
 };
 
-export const COMPANY_OVERVIEW = {
-  title: "About Cloud Media Tech Solutions",
+export const WHO_WE_ARE = {
+  heading: "More Than a Technology Company. A Partner in Your Digital Journey.",
   paragraphs: [
-    "Cloud Media Tech Solutions is a technology-driven startup founded by Aral Aldrin John D'Souza. Our mission is to make digital solutions accessible and affordable for businesses of every size.",
-    "We believe having a website should not be a luxury reserved for large corporations. Every entrepreneur, local business and growing organisation deserves an opportunity to establish its identity online.",
-    "We bring website development, digital services and business technology solutions together under one platform.",
+    "Cloud Media Tech Solutions is a technology-driven startup founded by Aral Aldrin John D'Souza.",
+    "We started with a simple observation: while businesses are increasingly moving online, many small businesses, entrepreneurs and startups still find professional website development expensive or complicated.",
+    "We believe this should not be a barrier.",
+    "Our goal is to make professional website development and digital solutions accessible to everyone, regardless of business size or budget.",
+    "From business websites and e-commerce platforms to custom web applications and digital services, we aim to bring everything businesses need to establish and strengthen their online presence under one platform.",
   ],
 };
 
-export const STORY = {
-  title: "Our Story: Why We Started",
-  problems: [
-    "Many small businesses cannot afford expensive website development.",
-    "Many entrepreneurs struggle to find reliable digital service providers.",
-    "Many businesses still lack a professional online identity.",
-    "Digital transformation should be accessible to everyone.",
+export const WHY_WE_STARTED = {
+  heading: "Built on a Simple Belief. Every Business Deserves a Website.",
+  intro:
+    "Every business has something valuable to offer. A local restaurant, a family-owned hotel, a retail store, a startup or an independent professional deserves the same opportunity to reach customers online.",
+  challenge:
+    "However, professional digital solutions have often been out of reach for smaller businesses because of cost and complexity.",
+  response: [
+    "We started Cloud Media Tech Solutions to help change that.",
+    "Our aim is to simplify technology, remove unnecessary barriers and give businesses an affordable way to establish their digital identity.",
   ],
-  bridge:
-    "Cloud Media Tech Solutions was created to close this gap. We keep our packages simple and our process straightforward, so a small shop or a first-time founder can get a professional online presence without a large budget.",
 };
 
 export const MISSION_VISION = {
-  mission:
-    "To empower small and medium-sized businesses, entrepreneurs and startups with affordable, reliable and accessible digital solutions.",
-  vision:
-    "A world where every business has a website, every entrepreneur has a digital identity, and no business is left behind because of technology costs.",
+  mission: {
+    label: "Our Mission",
+    headline: "Making Digital Growth Accessible.",
+    body: "Our mission is to empower small and medium-sized businesses, startups and entrepreneurs with affordable, reliable and professional digital solutions that help them establish an online presence and grow with confidence.",
+  },
+  vision: {
+    label: "Our Vision",
+    headline: "A Website for Every Business. Opportunities Without Limits.",
+    body: "Our vision is to create a digital ecosystem where every business, regardless of its size or budget, has access to the technology and tools needed to compete in an increasingly digital world.",
+  },
 };
+
+export type AboutValue = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+};
+
+export const ABOUT_VALUES: AboutValue[] = [
+  {
+    title: "Accessibility",
+    description:
+      "Technology and professional websites should be accessible to businesses of every size.",
+    icon: Accessibility,
+  },
+  {
+    title: "Affordability",
+    description:
+      "Quality digital solutions should not require an unreasonable investment.",
+    icon: Wallet,
+  },
+  {
+    title: "Innovation",
+    description:
+      "We embrace modern technology to create useful, effective and scalable digital experiences.",
+    icon: Lightbulb,
+  },
+  {
+    title: "Partnership",
+    description:
+      "We believe in building long-term relationships and supporting businesses as they grow.",
+    icon: HeartHandshake,
+  },
+];
 
 export type AboutService = {
   title: string;
   description: string;
   icon: LucideIcon;
 };
+
+export const SERVICES_HEADING = "Everything Your Business Needs to Grow Digitally.";
 
 export const ABOUT_SERVICES: AboutService[] = [
   {
@@ -75,16 +120,10 @@ export const ABOUT_SERVICES: AboutService[] = [
     icon: Globe,
   },
   {
-    title: "E-commerce Website Development",
+    title: "E-commerce Development",
     description:
       "An online store with product pages and a simple checkout, ready to start selling.",
     icon: ShoppingCart,
-  },
-  {
-    title: "Landing Page Development",
-    description:
-      "A focused page built to turn visitors into enquiries for a campaign, offer or launch.",
-    icon: Rocket,
   },
   {
     title: "Custom Web Applications",
@@ -99,19 +138,19 @@ export const ABOUT_SERVICES: AboutService[] = [
     icon: Palette,
   },
   {
-    title: "Digital Marketing",
-    description:
-      "Campaigns and content that help people discover your business online.",
-    icon: Megaphone,
-  },
-  {
     title: "SEO Solutions",
     description:
       "Practical search optimisation so people looking for your services can find you.",
     icon: Search,
   },
   {
-    title: "Domain & Web Hosting",
+    title: "Digital Marketing",
+    description:
+      "Campaigns and content that help people discover your business online.",
+    icon: Megaphone,
+  },
+  {
+    title: "Domain and Hosting",
     description:
       "Domain registration and reliable hosting, set up and managed for you.",
     icon: Server,
@@ -130,71 +169,73 @@ export const ABOUT_SERVICES: AboutService[] = [
   },
 ];
 
-export const WHO_WE_SERVE = [
-  { label: "Small businesses", icon: Store },
-  { label: "Medium-sized businesses", icon: Building2 },
-  { label: "Startups", icon: Rocket },
-  { label: "Entrepreneurs", icon: Lightbulb },
-];
-
-export const WHY_CHOOSE_US = [
-  {
-    title: "Affordable Digital Solutions",
-    description: "Professional quality built to fit a small budget.",
-    icon: Wallet,
-  },
-  {
-    title: "One Platform, Multiple Services",
-    description:
-      "Websites, marketing and digital tools handled in one place, with one point of contact.",
-    icon: Layers,
-  },
-  {
-    title: "Business-Focused Approach",
-    description:
-      "We start with what your business needs to achieve, then choose the technology to match.",
-    icon: Target,
-  },
-  {
-    title: "Modern Technology",
-    description:
-      "Fast, responsive websites built with current tools that work on every device.",
-    icon: Sparkles,
-  },
-  {
-    title: "Responsive Customer Support",
-    description: "Questions go to a real person on WhatsApp or email.",
-    icon: HeartHandshake,
-  },
-  {
-    title: "Solutions That Grow With Your Business",
-    description:
-      "Start with the essentials and add features as your business expands.",
-    icon: TrendingUp,
-  },
-];
+export const WHO_WE_SERVE = {
+  heading: "Built for Businesses Like Yours.",
+  description:
+    "Our solutions are designed to meet different business requirements and budgets.",
+  audiences: [
+    { label: "Small and local businesses", icon: Store },
+    { label: "Medium-sized enterprises", icon: Building2 },
+    { label: "Startups and entrepreneurs", icon: Rocket },
+    { label: "Hotels and hospitality businesses", icon: Hotel },
+    { label: "Restaurants and cafes", icon: UtensilsCrossed },
+    { label: "Retail and e-commerce businesses", icon: ShoppingBag },
+    { label: "Freelancers and consultants", icon: Briefcase },
+    { label: "Professional service providers", icon: Users },
+  ] satisfies { label: string; icon: LucideIcon }[],
+};
 
 export const FOUNDER = {
   name: "Aral Aldrin John D'Souza",
-  designation: "Founder, Cloud Media Tech Solutions",
+  designation: "Founder – Cloud Media Tech Solutions",
   paragraphs: [
-    "Cloud Media Tech Solutions was founded by Aral Aldrin John D'Souza with a vision of making technology accessible to businesses of every size.",
-    "With a background in computer applications, cybersecurity and software development, he aims to combine technology, creativity and business understanding to deliver practical and affordable digital solutions.",
-    "His philosophy is simple: Every business deserves a digital identity, regardless of its budget.",
+    "Cloud Media Tech Solutions was founded by Aral Aldrin John D'Souza with a vision of making professional digital solutions accessible to businesses of every size.",
+    "With an educational background in computer applications and cybersecurity, alongside experience in software development, he brings together technology, creativity and business understanding to build practical digital solutions.",
+    "His belief is that every business deserves an opportunity to establish its identity online, without being restricted by expensive development costs.",
   ],
   quote:
     "You shouldn't need a massive budget to make your business visible to the world. Every business deserves an opportunity to grow digitally.",
 };
 
-export const PROMISE = {
-  title: "Our Promise",
-  description:
-    "We will keep our pricing affordable, communicate clearly at every step, and build websites that can grow with your business.",
+export const APPROACH = {
+  heading: "Simple Process. Meaningful Results.",
+  steps: [
+    {
+      number: "01",
+      title: "Understand",
+      description: "We understand your business, goals and requirements.",
+    },
+    {
+      number: "02",
+      title: "Plan",
+      description: "We identify the right website and digital solution for your needs.",
+    },
+    {
+      number: "03",
+      title: "Build",
+      description: "We design and develop a professional digital experience.",
+    },
+    {
+      number: "04",
+      title: "Support",
+      description:
+        "We help you take your business online and discuss further improvements as your business grows.",
+    },
+  ],
+};
+
+export const COMMITMENT = {
+  heading: "We Don't Just Build Websites. We Help Businesses Move Forward.",
+  paragraphs: [
+    "Whether you are launching your first business website, building an online store or modernising your existing digital presence, Cloud Media Tech Solutions aims to make the journey straightforward, affordable and professional.",
+    "Your business has a story. Let's help the world discover it.",
+  ],
 };
 
 export const FINAL_CTA = {
-  headline: "Your Business. Your Website. Your Digital Future.",
+  headline: "Ready to Take Your Business Online?",
   description:
-    "Let's make your business visible to the world. Start your digital journey with Cloud Media Tech Solutions.",
-  cta: { label: "Let's Build Your Website.", to: "/contact" },
+    "Let's create a digital presence that reflects your business, connects with your customers and supports your growth.",
+  primaryCta: { label: "Start Your Project", href: "/#enquiry" },
+  secondaryCta: { label: "Explore Our Packages", href: "/#packages" },
 };
