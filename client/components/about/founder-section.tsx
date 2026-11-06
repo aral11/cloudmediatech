@@ -15,12 +15,10 @@ function FounderPortrait() {
 
   return (
     <div
-      role="img"
-      aria-label="Founder photo placeholder"
-      className="flex h-64 w-64 sm:h-80 sm:w-80 flex-col items-center justify-center gap-2 rounded-3xl bg-gradient-to-br from-tech-500 to-cloud-500 text-white shadow-2xl ring-4 ring-tech-500/30"
+      aria-hidden="true"
+      className="flex h-64 w-64 sm:h-80 sm:w-80 items-center justify-center rounded-3xl bg-tech-500 text-white shadow-xl"
     >
       <span className="text-6xl font-poppins font-bold">AD</span>
-      <span className="text-sm text-white/80">Founder photo placeholder</span>
     </div>
   );
 }

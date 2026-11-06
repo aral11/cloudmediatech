@@ -1,4 +1,3 @@
-import { LaunchOfferModal } from "@/components/launch-offer-modal";
 import { SiteLayout } from "@/components/site-layout";
 import { HeroSection } from "@/components/home/hero-section";
 import { WhatWeDo } from "@/components/home/what-we-do";
@@ -16,7 +15,6 @@ export default function Index() {
 
   return (
     <SiteLayout>
-      <LaunchOfferModal />
       <HeroSection />
       <WhatWeDo />
       <WhyChooseUs />

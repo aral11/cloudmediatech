@@ -4,22 +4,22 @@ import { buildEnquiryMessage, buildEnquiryUrl } from "@/lib/enquiry";
 const values = {
   name: "Asha Rao",
   businessName: "Rao & Co",
-  businessType: "Cafe",
+  businessCategory: "Cafe",
   phone: "+91 98765 43210",
   email: "asha@example.com",
+  serviceRequired: "New Website",
   packageValue: "business",
-  requirement: "New Website",
-  additionalDetails: "  Need online menu  ",
+  projectRequirements: "  Need online menu  ",
 };
 
 describe("buildEnquiryMessage", () => {
   it("inserts customer and package details", () => {
     const message = buildEnquiryMessage(values);
     expect(message).toContain("Name: Asha Rao");
-    expect(message).toContain("Business Type: Cafe");
-    expect(message).toContain("Package Selected: Business");
+    expect(message).toContain("Business Category: Cafe");
+    expect(message).toContain("Preferred Package: Business");
     expect(message).toContain("Package Price: ₹19,999");
-    expect(message).toContain("Requirement: New Website");
+    expect(message).toContain("Service Required: New Website");
     expect(message).toContain("Need online menu");
   });
 

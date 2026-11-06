@@ -9,11 +9,14 @@ export function HeroSection() {
       id="home"
       className="pt-28 pb-16 min-h-screen flex items-center relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-tech-50 via-cloud-50 to-background animate-gradient-x bg-[length:400%_400%]"></div>
+      <div className="absolute inset-0 bg-muted/40"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="animate-slide-in-left">
-            <h1 className="text-4xl md:text-6xl font-poppins font-bold mb-6 leading-tight">
+          <div>
+            <p className="text-sm sm:text-base font-semibold uppercase tracking-wider text-tech-500 mb-4">
+              Affordable Website Development for Businesses.
+            </p>
+            <h1 className="text-4xl md:text-5xl font-poppins font-bold mb-6 leading-tight">
               A website that brings you customers, not just compliments.
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-lg">
@@ -47,15 +50,12 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="flex justify-center animate-slide-in-right">
-            <div className="relative">
-              <img
-                src={LOGO_URL}
-                alt="Cloud Media Tech Solutions logo"
-                className="h-64 w-auto animate-floating drop-shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-tech-500/20 rounded-full blur-3xl animate-glow"></div>
-            </div>
+          <div className="flex justify-center">
+            <img
+              src={LOGO_URL}
+              alt="Cloud Media Tech Solutions logo"
+              className="h-56 sm:h-64 w-auto"
+            />
           </div>
         </div>
       </div>

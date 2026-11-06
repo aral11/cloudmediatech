@@ -24,7 +24,7 @@ import {
 export const FOUNDER_PHOTO_URL: string | null = null;
 
 export const HERO = {
-  eyebrow: "Every Business Deserves a Website.",
+  eyebrow: "Affordable Website Development for Businesses.",
   headline: "Your Business Deserves to Be Online.",
   description:
     "We believe every business deserves a professional digital identity. From small businesses and startups to growing enterprises, we make websites and digital solutions accessible, affordable and simple.",

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ConceptPreview } from "@/components/portfolio/concept-preview";
 import { SiteLayout } from "@/components/site-layout";
 import { useDocumentMeta } from "@/hooks/use-document-meta";
 
@@ -49,14 +50,9 @@ export default function Portfolio() {
                 className="group overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative bg-gradient-to-br from-tech-50 to-tech-100 dark:from-tech-900 dark:to-tech-800">
-                  <img
-                    src="/placeholder.svg"
-                    alt={`${concept.title} concept design screenshot`}
-                    loading="lazy"
-                    className="w-full h-48 object-cover"
-                  />
-                  <span className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-semibold bg-blue-500 text-white">
+                <div className="relative">
+                  <ConceptPreview />
+                  <span className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-semibold bg-tech-500 text-white">
                     Concept design
                   </span>
                 </div>

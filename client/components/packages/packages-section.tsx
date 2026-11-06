@@ -16,10 +16,13 @@ export function PackagesSection() {
       <section
         id="packages"
         aria-labelledby="packages-heading"
-        className="scroll-mt-24 bg-gradient-to-b from-background to-card py-16 sm:py-24"
+        className="scroll-mt-24 bg-background py-16 sm:py-24"
       >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+            <p className="text-sm font-semibold uppercase tracking-wider text-tech-500 mb-3">
+              Affordable Website Development for Businesses.
+            </p>
             <h2 id="packages-heading" className="text-3xl sm:text-4xl font-poppins font-bold mb-4">
               Website Development Packages
             </h2>

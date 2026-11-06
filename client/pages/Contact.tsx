@@ -17,6 +17,9 @@ export default function Contact() {
       <section className="pt-28 pb-12 sm:pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
+            <p className="text-sm sm:text-base font-semibold uppercase tracking-wider text-tech-500 mb-4">
+              Affordable Website Development for Businesses.
+            </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-4 sm:mb-6">
               Let's talk about your website.
             </h1>

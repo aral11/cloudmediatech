@@ -29,7 +29,7 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-slate-300">
-              Affordable website development for businesses
+              Affordable Website Development for Businesses.
             </p>
           </div>
 

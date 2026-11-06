@@ -16,27 +16,30 @@ type FormErrors = Partial<Record<keyof EnquiryValues | "consent", string>>;
 const emptyValues: EnquiryValues = {
   name: "",
   businessName: "",
-  businessType: "",
+  businessCategory: "",
   phone: "",
   email: "",
+  serviceRequired: "",
   packageValue: "",
-  requirement: "",
-  additionalDetails: "",
+  projectRequirements: "",
 };
 
 function validate(values: EnquiryValues, consent: boolean): FormErrors {
   const errors: FormErrors = {};
   if (!values.name.trim()) errors.name = "Please enter your full name.";
   if (!values.businessName.trim()) errors.businessName = "Please enter your business name.";
-  if (!values.businessType.trim()) errors.businessType = "Please enter your type of business.";
+  if (!values.businessCategory.trim()) errors.businessCategory = "Please enter your business category.";
   if (values.phone.replace(/\D/g, "").length < 10) {
     errors.phone = "Please enter a phone number with at least 10 digits.";
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())) {
     errors.email = "Please enter a valid email address.";
   }
+  if (!values.serviceRequired) errors.serviceRequired = "Please choose a service.";
   if (!values.packageValue) errors.packageValue = "Please choose a package.";
-  if (!values.requirement) errors.requirement = "Please choose what you need.";
+  if (!values.projectRequirements.trim()) {
+    errors.projectRequirements = "Please describe your project requirements.";
+  }
   if (!consent) errors.consent = "Please agree to be contacted to continue.";
   return errors;
 }
@@ -139,17 +142,17 @@ export function EnquiryForm({ selectedPackage, onPackageChange }: EnquiryFormPro
             onChange={(e) => update("businessName")(e.target.value)}
           />
         </Field>
-        <Field id="enquiry-type" label="Type of Business *" error={errors.businessType}>
+        <Field id="enquiry-category" label="Business Category *" error={errors.businessCategory}>
           <Input
-            id="enquiry-type"
+            id="enquiry-category"
             placeholder="e.g. hotel, clinic, retail store"
-            aria-invalid={!!errors.businessType}
-            aria-describedby={errors.businessType ? "enquiry-type-error" : undefined}
-            value={values.businessType}
-            onChange={(e) => update("businessType")(e.target.value)}
+            aria-invalid={!!errors.businessCategory}
+            aria-describedby={errors.businessCategory ? "enquiry-category-error" : undefined}
+            value={values.businessCategory}
+            onChange={(e) => update("businessCategory")(e.target.value)}
           />
         </Field>
-        <Field id="enquiry-phone" label="Phone Number / WhatsApp Number *" error={errors.phone}>
+        <Field id="enquiry-phone" label="Phone / WhatsApp *" error={errors.phone}>
           <Input
             id="enquiry-phone"
             type="tel"
@@ -171,7 +174,26 @@ export function EnquiryForm({ selectedPackage, onPackageChange }: EnquiryFormPro
             onChange={(e) => update("email")(e.target.value)}
           />
         </Field>
-        <Field id="enquiry-package" label="Website Package Required *" error={errors.packageValue}>
+        <Field id="enquiry-service" label="Service Required *" error={errors.serviceRequired}>
+          <select
+            id="enquiry-service"
+            className={selectClass}
+            aria-invalid={!!errors.serviceRequired}
+            aria-describedby={errors.serviceRequired ? "enquiry-service-error" : undefined}
+            value={values.serviceRequired}
+            onChange={(e) => update("serviceRequired")(e.target.value)}
+          >
+            <option value="" disabled>
+              Choose a service
+            </option>
+            {ENQUIRY_REQUIREMENT_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </Field>
+        <Field id="enquiry-package" label="Preferred Website Package *" error={errors.packageValue}>
           <select
             id="enquiry-package"
             className={selectClass}
@@ -190,34 +212,19 @@ export function EnquiryForm({ selectedPackage, onPackageChange }: EnquiryFormPro
             ))}
           </select>
         </Field>
-        <Field id="enquiry-requirement" label="What do you need? *" error={errors.requirement}>
-          <select
-            id="enquiry-requirement"
-            className={selectClass}
-            aria-invalid={!!errors.requirement}
-            aria-describedby={errors.requirement ? "enquiry-requirement-error" : undefined}
-            value={values.requirement}
-            onChange={(e) => update("requirement")(e.target.value)}
-          >
-            <option value="" disabled>
-              Choose an option
-            </option>
-            {ENQUIRY_REQUIREMENT_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </Field>
       </div>
 
-      <Field id="enquiry-details" label="Additional Requirements">
+      <Field id="enquiry-requirements" label="Project Requirements *" error={errors.projectRequirements}>
         <Textarea
-          id="enquiry-details"
+          id="enquiry-requirements"
           rows={4}
-          placeholder="Tell us about features, timelines or anything else we should know."
-          value={values.additionalDetails}
-          onChange={(e) => update("additionalDetails")(e.target.value)}
+          placeholder="Tell us about your business, the pages or features you need and your timeline."
+          aria-invalid={!!errors.projectRequirements}
+          aria-describedby={
+            errors.projectRequirements ? "enquiry-requirements-error" : undefined
+          }
+          value={values.projectRequirements}
+          onChange={(e) => update("projectRequirements")(e.target.value)}
         />
       </Field>
 
@@ -244,10 +251,10 @@ export function EnquiryForm({ selectedPackage, onPackageChange }: EnquiryFormPro
 
       <Button
         type="submit"
-        className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold h-12 sm:h-14 text-sm sm:text-base active:scale-95"
+        className="w-full bg-tech-500 hover:bg-tech-600 text-white font-semibold h-12 sm:h-14 text-sm sm:text-base"
       >
         <MessageSquare className="h-4 w-4 mr-2" aria-hidden="true" />
-        Send Enquiry on WhatsApp
+        Submit Enquiry via WhatsApp
       </Button>
       <p className="text-xs text-center text-muted-foreground">* Required fields</p>
     </form>
