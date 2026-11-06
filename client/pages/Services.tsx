@@ -63,7 +63,7 @@ export default function Services() {
           <div className="max-w-3xl mx-auto text-center mt-12 sm:mt-16 space-y-6">
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               Prices depend on pages and features. Starter website packages
-              from ₹4,999. Tell us what you need and we'll quote clearly.
+              from ₹9,999. Tell us what you need and we'll quote clearly.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button
