@@ -21,7 +21,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-export const FOUNDER_PHOTO_URL: string | null = null;
+export const FOUNDER_PHOTO_URL: string | null =
+  "https://cdn.builder.io/api/v1/image/assets%2F010d7df9751a411d85bb96dd347f726b%2F5f61e502134f4e7288a374d7b4888243?format=webp&width=800&height=1200";
 
 export const HERO = {
   eyebrow: "Affordable Website Development for Businesses.",
