@@ -3,13 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ContactForm } from "@/components/contact-form";
 import { SiteLayout } from "@/components/site-layout";
 import { useDocumentMeta } from "@/hooks/use-document-meta";
-import { CONTACT_EMAIL, buildWhatsAppUrl } from "@/lib/site";
-import { Mail, MessageSquare } from "lucide-react";
+import { CONTACT_EMAIL, INSTAGRAM_URL, LOCATIONS, buildWhatsAppUrl } from "@/lib/site";
+import { Instagram, Mail, MapPin, MessageSquare } from "lucide-react";
 
 export default function Contact() {
   useDocumentMeta(
-    "Contact Us | Cloud Media Tech Solutions",
-    "Contact Cloud Media Tech Solutions by form, WhatsApp or email to discuss your website.",
+    "Contact Cloud Media Tech Solutions | Free Website Review",
+    "Get in touch for a free website review or quote. We respond quickly on WhatsApp and email.",
   );
 
   return (
@@ -18,19 +18,20 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-4 sm:mb-6">
-              Contact Us
+              Let's talk about your website.
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Tell us about your business and we will get back to you.
+              Tell us about your business and we'll reply with clear next steps.
+              No pressure, no obligation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="animate-fade-in">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="animate-fade-in lg:col-span-2">
               <CardHeader>
-                <CardTitle className="text-xl sm:text-2xl">Send a message</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl">Request a free review</CardTitle>
                 <CardDescription>
-                  Opens WhatsApp with your message ready to send.
+                  Opens WhatsApp with your details ready to send.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -38,29 +39,38 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="animate-fade-in">
+            <Card className="animate-fade-in h-fit">
               <CardHeader>
                 <CardTitle className="text-xl sm:text-2xl">Reach us directly</CardTitle>
-                <CardDescription>Prefer to message us? Use either channel below.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <Button
-                  className="w-full bg-green-500 hover:bg-green-600 text-white h-12 sm:h-14 text-sm sm:text-base font-semibold active:scale-95"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white h-12 text-sm sm:text-base font-semibold active:scale-95"
                   onClick={() => window.open(buildWhatsAppUrl(), "_blank")}
                 >
                   <MessageSquare className="h-4 w-4 mr-2" />
                   Chat on WhatsApp
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full h-12 sm:h-14 text-sm sm:text-base font-semibold"
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="flex items-center gap-3 text-sm sm:text-base break-all hover:text-tech-500 transition-colors"
                 >
-                  <a href={`mailto:${CONTACT_EMAIL}`} className="break-all">
-                    <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
-                    {CONTACT_EMAIL}
-                  </a>
-                </Button>
+                  <Mail className="h-5 w-5 flex-shrink-0 text-tech-500" />
+                  {CONTACT_EMAIL}
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm sm:text-base hover:text-tech-500 transition-colors"
+                >
+                  <Instagram className="h-5 w-5 flex-shrink-0 text-tech-500" />
+                  @cloudmediatech
+                </a>
+                <div className="flex items-center gap-3 text-sm sm:text-base">
+                  <MapPin className="h-5 w-5 flex-shrink-0 text-tech-500" />
+                  {LOCATIONS}
+                </div>
               </CardContent>
             </Card>
           </div>

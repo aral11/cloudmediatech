@@ -3,6 +3,10 @@ export const LOGO_URL =
 
 export const CONTACT_EMAIL = "contact@cloudmediatechsolutions.com";
 
+export const INSTAGRAM_URL = "https://instagram.com/cloudmediatech";
+
+export const LOCATIONS = "Mumbai & Mangalore, India";
+
 const WHATSAPP_NUMBER = "918105784258";
 
 export function buildWhatsAppUrl(message?: string) {

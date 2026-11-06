@@ -1,11 +1,13 @@
 import {
   AppWindow,
-  Code,
+  Building2,
+  Megaphone,
   Palette,
   RefreshCw,
   Rocket,
   Search,
   ShoppingCart,
+  Workflow,
   type LucideIcon,
 } from "lucide-react";
 
@@ -18,38 +20,56 @@ export interface Service {
 export const services: Service[] = [
   {
     icon: Palette,
-    title: "Website Design",
+    title: "Website Design and Development",
     description:
-      "Clean, modern layouts designed around your brand and your customers.",
+      "A clean, modern site that explains what you do and makes it easy to contact you.",
+  },
+  {
+    icon: Building2,
+    title: "Business Websites",
+    description:
+      "Ideal for restaurants, clinics, agencies, schools and local businesses that want a credible online home.",
   },
   {
     icon: ShoppingCart,
-    title: "Ecommerce Websites",
+    title: "E-commerce Websites",
     description:
-      "Online stores with product catalogs, shopping carts and payment gateway integration.",
+      "Show products, take orders and manage your store without technical stress.",
+  },
+  {
+    icon: AppWindow,
+    title: "Custom Web Applications",
+    description:
+      "Booking systems, dashboards and tools built around how your business actually works.",
   },
   {
     icon: Rocket,
     title: "Landing Pages",
     description:
-      "Focused pages built to turn visitors into enquiries, bookings or sales.",
+      "One focused page for a campaign, offer or event, designed to get enquiries.",
   },
   {
     icon: RefreshCw,
-    title: "Website Redesign",
+    title: "Redesign and Maintenance",
     description:
-      "Refresh an outdated site with a new design and mobile-friendly layouts.",
+      "We refresh outdated sites and keep them secure and up to date.",
   },
   {
     icon: Search,
-    title: "SEO Setup",
+    title: "SEO and Optimisation",
     description:
-      "Basic on-page SEO, plus Google Search Console and Analytics setup.",
+      "Make your site faster and easier for Google and customers to understand.",
   },
   {
-    icon: AppWindow,
-    title: "Web Applications",
+    icon: Megaphone,
+    title: "Digital Marketing and Branding",
     description:
-      "Custom web applications and business tools built to your requirements.",
+      "Social media creatives and brand basics that match your website.",
+  },
+  {
+    icon: Workflow,
+    title: "Business Automation and Consulting",
+    description:
+      "Reduce manual work with simple tools and automation.",
   },
 ];

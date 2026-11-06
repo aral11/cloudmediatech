@@ -10,6 +10,7 @@ const navItems = [
   { to: "/", label: "Home", end: true },
   { to: "/services", label: "Services", end: false },
   { to: "/portfolio", label: "Portfolio", end: false },
+  { to: "/about", label: "About", end: false },
   { to: "/contact", label: "Contact", end: false },
 ];
 
@@ -25,19 +26,19 @@ export function SiteHeader() {
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
+        <div className="flex items-center justify-between gap-4">
+          <Link to="/" className="flex items-center space-x-2 min-w-0">
             <img
               src={LOGO_URL}
-              alt="Cloud Media Tech"
+              alt="Cloud Media Tech Solutions logo"
               className="h-7 sm:h-8 w-auto animate-floating"
             />
-            <span className="font-poppins font-bold text-lg sm:text-xl text-foreground hidden sm:inline">
+            <span className="font-poppins font-bold text-lg text-foreground hidden sm:inline truncate">
               Cloud Media Tech
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
@@ -48,10 +49,13 @@ export function SiteHeader() {
                 {item.label}
               </NavLink>
             ))}
+            <Button asChild className="bg-tech-500 hover:bg-tech-600 text-white font-semibold">
+              <Link to="/contact">Get a Free Website Review</Link>
+            </Button>
             <ThemeToggle />
           </div>
 
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2">
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -69,7 +73,7 @@ export function SiteHeader() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <NavLink
@@ -82,6 +86,13 @@ export function SiteHeader() {
                   {item.label}
                 </NavLink>
               ))}
+              <Button
+                asChild
+                className="bg-tech-500 hover:bg-tech-600 text-white font-semibold"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Link to="/contact">Get a Free Website Review</Link>
+              </Button>
             </div>
           </div>
         )}
