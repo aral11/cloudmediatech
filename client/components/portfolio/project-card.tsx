@@ -16,14 +16,10 @@ export function ProjectCard() {
               <span className="h-2 w-2 rounded-full bg-green-400" />
               <span className="ml-3 truncate text-xs text-muted-foreground">decoremporiums.com</span>
             </div>
-            <img
-              src="/portfolio/decor-emporiums.png"
-              alt="Homepage of the Decor Emporiums website"
-              width={1280}
-              height={960}
-              loading="lazy"
-              className="w-full aspect-[4/3] object-cover object-top"
-            />
+            <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-tech-900 to-tech-600 p-6 text-center text-white">
+              <span className="font-poppins text-2xl font-bold sm:text-3xl">Decor Emporiums</span>
+              <span className="text-sm text-white/80">Interior Design</span>
+            </div>
           </div>
           <span className="absolute top-7 right-7 sm:top-9 sm:right-9 rounded-full bg-green-600 px-3 py-1 text-xs font-semibold tracking-wide text-white">
             PROJECT COMPLETED

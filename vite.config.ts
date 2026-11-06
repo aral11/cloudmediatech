@@ -78,6 +78,21 @@ function prerenderRouteMetaPlugin(): Plugin {
         fs.mkdirSync(routeDir, { recursive: true });
         fs.writeFileSync(path.join(routeDir, "index.html"), html);
       }
+
+      let notFoundHtml = replaceOrThrow(
+        template,
+        /<title>[\s\S]*?<\/title>/,
+        "<title>Page Not Found | Cloud Media Tech Solutions</title>",
+        "title",
+      );
+      notFoundHtml = replaceOrThrow(
+        notFoundHtml,
+        /<meta name="robots"[^>]*>/,
+        '<meta name="robots" content="noindex, follow" />',
+        "robots meta",
+      );
+      notFoundHtml = replaceOrThrow(notFoundHtml, /<link rel="canonical"[^>]*>\s*/, "", "canonical link");
+      fs.writeFileSync(path.join(outDir, "404.html"), notFoundHtml);
     },
   };
 }

@@ -7,7 +7,7 @@ export const CONTACT_EMAIL = "contact@cloudmediatechsolutions.com";
 
 export const INSTAGRAM_URL = "https://instagram.com/cloudmediatech";
 
-export const LOCATIONS = "Mumbai & Mangalore, India";
+export const LOCATIONS = "Mumbai & Mangaluru, India";
 
 const WHATSAPP_NUMBER = "918105784258";
 
