@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ConceptPreview } from "@/components/portfolio/concept-preview";
+import { ProjectCard } from "@/components/portfolio/project-card";
 import { SiteLayout } from "@/components/site-layout";
 import { useDocumentMeta } from "@/hooks/use-document-meta";
 
@@ -26,7 +27,7 @@ const concepts = [
 export default function Portfolio() {
   useDocumentMeta(
     "Website Design Portfolio | Cloud Media Tech Solutions",
-    "Concept website designs for restaurants, clinics and small online stores by Cloud Media Tech Solutions.",
+    "Completed website projects and concept designs by Cloud Media Tech Solutions, including a live interior design website in Mangaluru.",
   );
 
   return (
@@ -35,11 +36,22 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold mb-4 sm:mb-6">
-              See what we can build for your business.
+              Our Work. Our Creations.
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              These are concept designs created to show our style for different
-              industries.
+              Every business has a story. We help bring that story online through thoughtfully
+              designed websites and digital experiences.
+            </p>
+          </div>
+
+          <div className="mb-16 sm:mb-20">
+            <ProjectCard />
+          </div>
+
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl font-poppins font-bold mb-2">Concept Designs</h2>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Examples of what we can build for other industries.
             </p>
           </div>
 
