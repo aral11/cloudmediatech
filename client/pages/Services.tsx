@@ -8,11 +8,7 @@ import { services } from "@/lib/services";
 import { MessageSquare } from "lucide-react";
 
 export default function Services() {
-  useDocumentMeta(
-    "Website Development & Digital Solutions | Cloud Media Tech Solutions",
-    "Business websites, online stores, landing pages, redesigns and SEO for small businesses and startups. See what we can build for you.",
-    "/services",
-  );
+  useDocumentMeta("/services");
 
   return (
     <SiteLayout>

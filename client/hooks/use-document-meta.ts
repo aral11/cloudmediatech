@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { LOGO_URL, SITE_URL } from "@/lib/site";
+import { ROUTE_META } from "@/lib/route-meta";
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
@@ -11,7 +12,9 @@ function upsertMeta(attr: "name" | "property", key: string, content: string) {
   el.setAttribute("content", content);
 }
 
-export function useDocumentMeta(title: string, description: string, path: string) {
+export function useDocumentMeta(path: keyof typeof ROUTE_META) {
+  const { title, description } = ROUTE_META[path];
+
   useEffect(() => {
     const url = `${SITE_URL}${path}`;
 

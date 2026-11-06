@@ -6,11 +6,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { useDocumentMeta } from "@/hooks/use-document-meta";
 
 export default function Portfolio() {
-  useDocumentMeta(
-    "Our Website Design & Development Portfolio | Cloud Media Tech Solutions",
-    "Completed website projects and concept designs by Cloud Media Tech Solutions, including a live interior design website in Mangaluru.",
-    "/portfolio",
-  );
+  useDocumentMeta("/portfolio");
 
   return (
     <SiteLayout>

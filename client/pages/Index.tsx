@@ -8,11 +8,7 @@ import { FinalCta } from "@/components/home/final-cta";
 import { useDocumentMeta } from "@/hooks/use-document-meta";
 
 export default function Index() {
-  useDocumentMeta(
-    "Cloud Media Tech Solutions | Affordable Website Development for Businesses",
-    "Looking for affordable website development? Cloud Media Tech Solutions builds professional business websites, e-commerce platforms and digital solutions for startups and growing businesses.",
-    "/",
-  );
+  useDocumentMeta("/");
 
   return (
     <SiteLayout>

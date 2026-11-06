@@ -7,11 +7,7 @@ import { CONTACT_EMAIL, INSTAGRAM_URL, LOCATIONS, buildWhatsAppUrl } from "@/lib
 import { Instagram, Mail, MapPin, MessageSquare } from "lucide-react";
 
 export default function Contact() {
-  useDocumentMeta(
-    "Contact Cloud Media Tech Solutions | Get a Website Quote",
-    "Get in touch for a free website review or quote. Reach us on WhatsApp or email.",
-    "/contact",
-  );
+  useDocumentMeta("/contact");
 
   return (
     <SiteLayout>
