@@ -9,8 +9,9 @@ import { useDocumentMeta } from "@/hooks/use-document-meta";
 
 export default function Index() {
   useDocumentMeta(
-    "Affordable Website Development for Businesses | Cloud Media Tech Solutions",
-    "We design and build modern, mobile-friendly websites for small businesses, startups and professionals in India and abroad. Get a free website review today.",
+    "Cloud Media Tech Solutions | Affordable Website Development for Businesses",
+    "Looking for affordable website development? Cloud Media Tech Solutions builds professional business websites, e-commerce platforms and digital solutions for startups and growing businesses.",
+    "/",
   );
 
   return (

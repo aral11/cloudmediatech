@@ -9,8 +9,9 @@ import { MessageSquare } from "lucide-react";
 
 export default function Services() {
   useDocumentMeta(
-    "Website Design, E-commerce and Web Development Services | Cloud Media Tech Solutions",
+    "Website Development & Digital Solutions | Cloud Media Tech Solutions",
     "Business websites, online stores, landing pages, redesigns and SEO for small businesses and startups. See what we can build for you.",
+    "/services",
   );
 
   return (

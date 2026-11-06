@@ -14,8 +14,9 @@ import { ClosingCta } from "@/components/about/closing-cta";
 
 export default function About() {
   useDocumentMeta(
-    "About Cloud Media Tech Solutions | Website Development in India",
+    "About Cloud Media Tech Solutions | Our Story & Vision",
     "Learn about Cloud Media Tech Solutions, a website development team in India helping small businesses, startups and professionals grow online.",
+    "/about",
   );
 
   return (
