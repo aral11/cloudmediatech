@@ -14,7 +14,7 @@ export function AboutHero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="inline-block rounded-full border border-cloud-400/40 bg-white/5 px-4 py-1.5 text-sm font-medium text-cloud-200 mb-6">
+            <p className="inline-block rounded-full border border-cloud-400/40 bg-slate-950/70 px-4 py-1.5 text-sm font-medium text-white mb-6">
               {HERO.eyebrow}
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-poppins font-bold leading-tight mb-6">
